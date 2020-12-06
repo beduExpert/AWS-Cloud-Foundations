@@ -10,7 +10,7 @@
 
 ## 3. Desarrollo 
 
-### Instala los recursos de AWS dependiendo de tu Sistema Operativo
+### Instala los siguientes recursos de AWS dependiendo de tu Sistema Operativo
 
 * [Windows](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-en-windows)
 * [Linux](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-linux)
@@ -34,6 +34,8 @@
 
 
 4. Verificar la instalación abriendo una consola CMD ejecutando el comando `aws --version`
+
+### [Una vez instalado, pasaremos a la configuración de los recursos de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#configuración)
 
 <img src="img/awscli-comprobacion-windows.png"></img>
 
@@ -66,10 +68,13 @@ aws --version
 ```
 <img src="img/wizardLx.png"></img>
 
+### [Una vez instalado, pasaremos a la configuración de los recursos de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#configuración)
 
 ### Instalación en MAC:
 1. Descargar el instalador pkg [desde](https://awscli.amazonaws.com/AWSCLIV2.pkg).
 2. Iniciar el instalador dando doble click al archivo instalado.
+
+### [Una vez instalado, pasaremos a la configuración de los recursos de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#configuración)
 
 ### Configuración
 
