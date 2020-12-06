@@ -19,6 +19,6 @@
 
 - [Reto  01: AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2001)
 
-- [Reto  01: AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2002)
+- [Reto  02:  AWS CLI con S3](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2002)
 
 
