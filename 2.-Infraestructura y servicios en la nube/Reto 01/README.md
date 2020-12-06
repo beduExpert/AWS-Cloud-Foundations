@@ -1,4 +1,4 @@
-# Sesión 2 - Reto 1
+# Reto 1
 
 
 ## 1. Objetivo 
