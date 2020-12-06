@@ -1,69 +1,85 @@
 # Ejemplo 3 - Servidor web estático
 
-# 1. Objetivo 🎯
+## 1. Objetivo 
 - Poner en marcha un bucket S3 como un servidor web estático.
 
-# 2. Requisitos 📌
+## 2. Requisitos 
 - Git instalado localmente. [¿Cómo instalar git?](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - Repositorio en local https://github.com/mdn/beginner-html-site-styled.
 
 
-# 3. Desarrollo 📑
+## 3. Desarrollo 
 
 1. Ingresar a la consola de AWS y seleccionar S3.
-![b1129b066999b324d197ae15ca6042a2.png](b1129b066999b324d197ae15ca6042a2.png)
+
+<img src="img/b1129b066999b324d197ae15ca6042a2.png"></img>
 
 
 2. Dar click en nuevo bucket.
-![web-server-bucket-01.png](web-server-bucket-01.png)
+
+<img src="img/web-server-bucket-01.png"></img>
 
 3. Seleccionar un nombre para el bucket, recordar que el nombre debe ser único es decir que no se haya repetido en ninguna otra cuenta de AWS.
-![sitio-estatico-nombre-bucket.png](sitio-estatico-nombre-bucket.png)
+
+<img src="img/sitio-estatico-nombre-bucket.png"></img>
 
 4. Dejar la configuración de acceso por defecto
-![sitioestatico-bucket-acceso.png](sitioestatico-bucket-acceso.png)
+
+<img src="img/sitioestatico-bucket-acceso.png"></img>
 
 5. Establecer etiquetas para el bucket.
 6. Dar click en "Crear bucket"
-![sitioestatico-tags.png](sitioestatico-tags.png)
 
-
+<img src="img/sitioestatico-tags.png"></img>
 
 Observar la generación del bucket:
-![sitioestatico-bucket-generado.png](sitioestatico-bucket-generado.png)
+
+<img src="img/sitioestatico-bucket-generado.png"></img>
 
 7. Descargar el zip del [repositorio](https://github.com/mdn/beginner-html-site-styled), descomprimir el contenido.
-![sitioestatico-descargar-zip.png](sitioestatico-descargar-zip.png)
+
+<img src="img/sitioestatico-descargar-zip.png"></img>
 
 8. Dar click en "Cargar"
-![sitioestatico-cargar.png](sitioestatico-cargar.png)
+
+<img src="img/sitioestatico-cargar.png"></img>
 
 9. Arrastrar los archivos y carpetas, si no se arrastran las carpetas no pueden ser seleccionadas. Dar click en "Cargar"
-![sitioestatico-upload-files.png](sitioestatico-upload-files.png)
+
+<img src="img/sitioestatico-upload-files.png"></img>
 
 Los archivos serán cargados y se podrán ver en la consola de AWS S3.
-![sitioestatico-archivos-cargados.png](sitioestatico-archivos-cargados.png)
+
+<img src="img/sitioestatico-archivos-cargados.png"></img>
 
 Al dar click en el archivo index.html se visualizan una serie de propiedades (metadatos), entre ellas se tiene la "URL del objeto"
-![sitioestatico-url-objeto.png](sitioestatico-url-objeto.png)
+
+<img src="img/sitioestatico-url-objeto.png"></img>
+
 Al dar click en la URL tenemos el siguiente error.
-![sitioestatico-error.png](sitioestatico-error.png)
+
+<img src="img/sitioestatico-error.png"></img>
 
 Aún faltan pasos antes de que el archivo sea visible desde internet.
 Los pasos siguientes son:
 
 10. Regresando al nivel de bucket (a), dar click en propiedades (b), seleccionar "Alojamiento de sitios web estáticos"
-![sitiosestaticos-config-alojamiento.png](sitiosestaticos-config-alojamiento.png)
+
+<img src="img/sitiosestaticos-config-alojamiento.png"></img>
 
 11. Establecer la configuración de alojamiento estático (a), proporcionar el nombre del archivo que será servido por default (b), click en guardar (c).
-![sitioestatico-habilitar-sitio-estatico.png](sitioestatico-habilitar-sitio-estatico.png)
+
+<img src="img/sitioestatico-habilitar-sitio-estatico.png"></img>
  
  12. A nivel bucket pasar a "Permisos" (a), editar (b) y desactivar la opción bloquear todo acceso público (c), guardar cambios.
- ![74f36eac2ab0dee018358fb8857ae291.png](74f36eac2ab0dee018358fb8857ae291.png)
+ 
+ <img src="img/74f36eac2ab0dee018358fb8857ae291.png"></img>
 
 13. En información general a nivel de bucket (a), seleccionar todos los archivos (b), después click en "Hacer público".
-![sitio-estatico-hacer-publico.png](sitio-estatico-hacer-publico.png)
+
+<img src="img/sitio-estatico-hacer-publico.png"></img>
 
 14. Hechos los  pasos anteriores la página web esta lista para ser servida.
-![sitioestatico-web-ready.png](sitioestatico-web-ready.png)
+
+<img src="img/sitioestatico-web-ready.png"></img>
 
