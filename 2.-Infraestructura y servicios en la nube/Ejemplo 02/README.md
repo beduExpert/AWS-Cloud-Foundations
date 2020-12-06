@@ -18,7 +18,8 @@ aws --region us-east-1 s3 mb s3://facturas
 ```
 <img src="img/creacionbucketfallido.png"><img>
 
-**¿Qué ha pasado?** Los nombres de los buckets S3 deben ser únicos en todo el servicio, en este caso, alguien con otra cuenta ya tiene configurado un bucket con el nombre `facturas`, cambiando el nombre del archivo la generación del bucket es correcta: [**Referencia**](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
+**¿Qué ha pasado?** Los nombres de los buckets S3 deben ser únicos en todo el servicio, en este caso, alguien con otra cuenta ya tiene configurado un bucket con el nombre `facturas`, cambiando el nombre del archivo la generación del bucket es correcta: 
+#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
 
 <img src="img/bucket-created-done.png"><img>
 
@@ -26,7 +27,7 @@ aws --region us-east-1 s3 mb s3://facturas
 ```bash
 aws --region us-east-1 s3 ls
 ```
-### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html)
+#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html)
 
 
 <img src="img/listar buckets.png"><img>
