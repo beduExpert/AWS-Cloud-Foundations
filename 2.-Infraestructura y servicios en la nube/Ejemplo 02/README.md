@@ -18,19 +18,21 @@ aws --region us-east-1 s3 mb s3://facturas
 ```
 <img src="img/creacionbucketfallido.png"><img>
 
-**¿Qué ha pasado?** Los nombres de los buckets S3 deben ser únicos en todo el servicio, en este caso, alguien con otra cuenta ya tiene configurado un bucket con el nombre `facturas`, cambiando el nombre del archivo la generación del bucket es correcta: 
-#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
+**¿Qué ha pasado?** Los nombres de los buckets S3 deben ser únicos en todo el servicio, en este caso, alguien con otra cuenta ya tiene configurado un bucket con el nombre `facturas`, cambiando el nombre del archivo la generación del 
+bucket es correcta: 
 
 <img src="img/bucket-created-done.png"><img>
+
+#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
 
 3. Listar los buckets S3 ejecutando el comando 
 ```bash
 aws --region us-east-1 s3 ls
 ```
-#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html)
-
 
 <img src="img/listar buckets.png"><img>
+
+#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html)
 
 4. Copiar múltiples archivos al bucket con el comando:
 
@@ -43,13 +45,13 @@ aws --region us-east-1 s3 cp /mnt/d/temp/ s3://facturas-personales/ --exclude "*
 
 <img src="img/subir-multiples-archivos.png"><img>
 
-Al navegar en la consola de AWS al servicio S3 se aprecia el bucket generado anteriormente:
+Al navegar en la consola de AWS al  **Servicio S3** se aprecia el bucket generado anteriormente:
 
 <img src="img/b1129b066999b324d197ae15ca6042a2.png"><img>
 
 <img src="img/lista de buckets.png"><img>
 
-Al ingresar al bucket se verán los archivos que se subieron.
+Al ingresar al **bucket** se verán los archivos que se subieron.
 <img src="img/files-uploaded.png"><img>
 
 
