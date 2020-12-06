@@ -36,14 +36,13 @@ aws --region us-east-1 s3 ls
 
 4. Copiar múltiples archivos al bucket con el comando:
 
-### [Referencia](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)
-
-
 ```bash
 aws --region us-east-1 s3 cp /mnt/d/temp/ s3://facturas-personales/ --exclude "*" --include "LP*.zip" --recursive
 ```
-
 <img src="img/subir-multiples-archivos.png"><img>
+
+#### [Referencia](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)
+
 
 Al navegar en la consola de AWS al  **Servicio S3** se aprecia el bucket generado anteriormente:
 
