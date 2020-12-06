@@ -15,7 +15,7 @@
 <img src="img/b1129b066999b324d197ae15ca6042a2.png"></img>
 
 
-2. Dar click en nuevo bucket.
+2. Dar click en **nuevo bucket**.
 
 <img src="img/web-server-bucket-01.png"></img>
 
@@ -27,7 +27,8 @@
 
 <img src="img/sitioestatico-bucket-acceso.png"></img>
 
-**A continuación estableceremos etiquetas para nuestro bucket.**
+### A continuación estableceremos etiquetas para nuestro bucket.
+
 6. Dar click en **Crear bucket**
 
 <img src="img/sitioestatico-tags.png"></img>
