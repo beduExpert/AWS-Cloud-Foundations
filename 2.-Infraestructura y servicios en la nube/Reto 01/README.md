@@ -10,7 +10,7 @@
 
 ## 3. Desarrollo 
 
-Responder a las siguientes preguntas:
+**Responder a las siguientes preguntas:**
 
 1. ¿Cuántas zonas (dominios raíz) hay habilitadas en Route53?
 2. ¿Cuántos roles se tienen configurados en la cuenta?
