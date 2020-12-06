@@ -8,7 +8,7 @@
 - Python 3.4+ instalado. [¿Cómo instalar?](https://aws.amazon.com/es/blogs/developer/deprecation-of-python-2-6-and-python-3-3-in-botocore-boto3-and-the-aws-cli/).
 - Fecha y hora correcta en el equipo local.
 
-# 3. Desarrollo 
+## 3. Desarrollo 
 
 
 ### Instalación en Windows:
@@ -33,7 +33,8 @@
 
 <img src="img/awscli-comprobacion-windows.png"></img>
 
-Instalación Linux:
+### Instalación Linux:
+
 1. Descargar el instalador para Linux con el comando:
 ```sh
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -66,7 +67,7 @@ aws --version
 1. Descargar el instalador pkg [desde](https://awscli.amazonaws.com/AWSCLIV2.pkg).
 2. Iniciar el instalador dando doble click al archivo instalado.
 
--------------Configuración---------------------
+### Configuración
 Ya instalado AWS CLI, es necesario configurarlo.
 
 1. Ejecutar el comando:
@@ -78,7 +79,7 @@ aws configure
 
 > **Nota:**
 > 
->Se recomienda seleccionar la región con menos latencia, se puede medir con [https://ping.psa.fun](https://ping.psa.fun)
+>Se recomienda seleccionar la región con menos latencia, se puede medir con [ping](https://ping.psa.fun)
 
 Para obtener las claves de acceso pasar a la siguiente sección del ejemplo.
 
