@@ -37,7 +37,7 @@
 
 <img src="img/awscli-comprobacion-windows.png"></img>
 
-### [Una vez instalado, pasaremos a la configuración de los recursos de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#configuración)
+#### [Una vez instalado, pasaremos a la configuración de los recursos de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#configuración)
 
 ### Instalación Linux:
 
