@@ -1,5 +1,5 @@
 
-# Sesión 1: Infraestructura y servicios en la nube
+# Sesión 2: Infraestructura y servicios en la nube
 
 ## Objetivos
 
