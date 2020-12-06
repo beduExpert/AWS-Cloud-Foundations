@@ -21,14 +21,14 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Usando AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001)
+- Ejemplo 01: [Usando AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001)
 
-- [Reto  01: AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2001)
+- Reto  01: [ AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2001)
 
-- [Ejemplo 02: Generando un bucket y copiando un archivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2002)
+- Ejemplo 02: [Generando un bucket y copiando un archivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2002)
 
-- [Ejemplo 03: Generando un bucket y copiando un archivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2003)
+- Ejemplo 03: [Generando un bucket y copiando un archivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2003)
 
-- [Reto  02:  AWS CLI con S3](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2002)
+- Reto  02: [AWS CLI con S3](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Reto%2002)
 
 
