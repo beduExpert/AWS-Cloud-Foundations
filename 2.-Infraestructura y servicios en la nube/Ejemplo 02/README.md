@@ -23,7 +23,7 @@ bucket es correcta:
 
 <img src="img/bucket-created-done.png"><img>
 
-#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
+#### [Referencia: `mb`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
 
 3. Listar los buckets S3 ejecutando el comando 
 ```bash
@@ -32,7 +32,7 @@ aws --region us-east-1 s3 ls
 
 <img src="img/listar buckets.png"><img>
 
-#### [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html)
+#### [Referencia: `ls`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html)
 
 4. Copiar múltiples archivos al bucket con el comando:
 
@@ -41,7 +41,7 @@ aws --region us-east-1 s3 cp /mnt/d/temp/ s3://facturas-personales/ --exclude "*
 ```
 <img src="img/subir-multiples-archivos.png"><img>
 
-#### [Referencia](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)
+#### [Referencia: `cp`](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)
 
 
 Al navegar en la consola de AWS al  **Servicio S3** se aprecia el bucket generado anteriormente:
