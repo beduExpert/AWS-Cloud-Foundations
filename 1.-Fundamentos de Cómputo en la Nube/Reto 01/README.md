@@ -6,7 +6,7 @@
 
 ## Desarrollo
 
-* Busca en bolsas de trabajo, trabajos relacionados con tecnologías de AWS, busca 10 empleos con rango salarial y saca un promedio. 
+* Busca 10 empleos con rango salarial y saca un promedio. 
 
 > 💡**Nota:**
 >
