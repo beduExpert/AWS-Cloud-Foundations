@@ -84,11 +84,3 @@ Ingresado el captcha la llamada será hecha al número especificado.
 <img src="img/12.png"></img>
 
 10. Ingresar a la siguiente [dirección](https://aws.amazon.com/es/console/), seleccionar la opción "Consola de administración de AWS", luego ingresar el email y password de la cuenta proporcionados en el [paso 2](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/1.-Fundamentos%20de%20C¢mputo%20en%20la%20Nube/Reto%2002#2-ingresar-los-datos-solicitados-con-tu-propio-email).
-
-<img src="img/13.png"></img>
-
-<img src="img/14.png"></img>
-
-11. 🎉**¡Felicidades!**, estás listo para comenzar la carrera en el mundo Amazon Web Services.
-
-<img src="img/15.png"></img>
