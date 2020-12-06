@@ -11,6 +11,7 @@
 ## 3. Desarrollo 
 
 Responder a las siguientes preguntas:
-1.- ¿Cuántas zonas (dominios raíz) hay habilitadas en Route53?
-2.- ¿Cuántos roles se tienen configurados en la cuenta?
-3.- Cuando se trabaja con una cuenta de AWS se pueden tener recursos en varias regiones, ¿Cómo debe ser la sintaxis para que el scope de región del comando sea diferente al configurado con **aws configure**?
+
+1. ¿Cuántas zonas (dominios raíz) hay habilitadas en Route53?
+2. ¿Cuántos roles se tienen configurados en la cuenta?
+3. Cuando se trabaja con una cuenta de AWS se pueden tener recursos en varias regiones, ¿Cómo debe ser la sintaxis para que el scope de región del comando sea diferente al configurado con **aws configure**?
