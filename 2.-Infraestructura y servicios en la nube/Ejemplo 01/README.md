@@ -10,9 +10,13 @@
 
 ## 3. Desarrollo 
 
+### Instala los recursos de AWS dependiendo de tu Sistema Operativo
+
+* [Windows](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-en-windows)
+* [Linux](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-linux)
+* [Mac OS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-en-mac)
 
 ### Instalación en Windows:
-
 
 1. En Windows basta con descargar e instalar el siguiente [MSI](https://awscli.amazonaws.com/AWSCLIV2.msi)
 
@@ -68,6 +72,7 @@ aws --version
 2. Iniciar el instalador dando doble click al archivo instalado.
 
 ### Configuración
+
 Ya instalado AWS CLI, es necesario configurarlo.
 
 1. Ejecutar el comando:
@@ -77,7 +82,7 @@ aws configure
 
 <img src="img/aws-cli-configutacion.png"></img>
 
-> **Nota:**
+>💡  **Nota:**
 > 
 >Se recomienda seleccionar la región con menos latencia, se puede medir con [ping](https://ping.psa.fun)
 
