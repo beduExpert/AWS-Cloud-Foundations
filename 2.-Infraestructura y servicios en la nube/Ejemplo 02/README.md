@@ -1,22 +1,25 @@
 # Ejemplo 2 - Generando un bucket y copiando un archivo
 
-# 1. Objetivo 🎯
+## 1. Objetivo 
 - Generar un bucket S3 como contenedor de facturas.
 
-# 2. Requisitos 📌
+## 2. Requisitos 
 - AWS CLI instalado y configurado.
 - Algunos archivos que se deseen subir al bucket.
 
 
-# 3. Desarrollo 📑
+## 3. Desarrollo 
 
 1. Abrir la línea de comandos del sistema operativo que se este usando:
 
-2. Usar el comando  mb (make bucket) para generar un bucket.
+2. Usar el comando  `mb` (make bucket) para generar un bucket.
 ```sh
 aws --region us-east-1 s3 mb s3://facturas
 ```
-![creacion bucket fallido.png](creacion bucket fallido.png)
+![creacion bucket fallido.png]()
+
+<img src="creacion bucket fallido.png"><img>
+
 ¿Qué ha pasado? Los nombres de los buckets S3 deben ser únicos en todo el servicio, en este caso, alguien con otra cuenta ya tiene configurado un bucket con el nombre `facturas`, cambiando el nombre del archivo la generación del bucket es correcta:
 
 [Referencia](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/mb.html)
