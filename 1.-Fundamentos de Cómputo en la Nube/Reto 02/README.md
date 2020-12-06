@@ -89,6 +89,6 @@ Ingresado el captcha la llamada será hecha al número especificado.
 
 <img src="img/14.png"></img>
 
-11. 🎉 **¡Felicidades!**, estás listo para comenzar la carrera en el mundo Amazon Web Services.
+11.  **🎉 ¡Felicidades!**, estás listo para comenzar la carrera en el mundo Amazon Web Services.
 
 <img src="img/15.png"></img>
