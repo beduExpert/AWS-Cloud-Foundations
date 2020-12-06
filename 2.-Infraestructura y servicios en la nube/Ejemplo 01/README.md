@@ -72,7 +72,7 @@ aws --version
 
 ### Instalación en MAC:
 
-1. Descargar el instalador pkg [desde](https://awscli.amazonaws.com/AWSCLIV2.pkg).
+1. Descargar el instalador pkg [aquí](https://awscli.amazonaws.com/AWSCLIV2.pkg).
 2. Iniciar el instalador dando doble click al archivo instalado.
 
 #### [Una vez instalado, pasaremos a la configuración de los recursos de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#configuración)
