@@ -17,7 +17,7 @@
 - Git instalado localmente. [¿Cómo instalar git?](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Fecha y hora correcta en el equipo local.
 - AWS CLI instalado
-- Tener descargado e siguiente [repositorio de forma local]( https://github.com/mdn/beginner-html-site-styled)
+- Tener descargado el siguiente [repositorio de forma local]( https://github.com/mdn/beginner-html-site-styled)
 
 ## Organización de la clase
 
