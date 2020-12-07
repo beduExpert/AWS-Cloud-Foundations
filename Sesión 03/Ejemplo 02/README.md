@@ -43,7 +43,7 @@ c) Seleccionar el bucket.
 d) Establecer la ubicación permitida.
 e) Establecer un nombre representativo del registro.
 
-<img src="img/ej2-establish-configuration-geolocation-registe"></img>
+<img src="img/ej2-establish-configuration-geolocation-register.png"></img>
 
 8. Configurado el registro habrá que crearlo dando click en **Crear registros**.
 
