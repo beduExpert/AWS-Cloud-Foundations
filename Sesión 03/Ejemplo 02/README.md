@@ -65,7 +65,7 @@ Activada la VPN y refrescando pantalla se ve no hay acceso.
 
 <img src="img/ej2-activate-vpn-success-and-blocked.png"></img>
 
-Accediendo a [https://www.iplocation.net](https://www.iplocation.net) se ve que la dirección IP está fuera de México.
+Accediendo a [iplocation](https://www.iplocation.net) se ve que la dirección IP está fuera de México.
 
 <img src="img/ej2-vpn-ip-non-in-mexico.png"></img>
 
