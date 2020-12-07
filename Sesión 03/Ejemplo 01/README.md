@@ -9,7 +9,7 @@
 
 ## 3. Desarrollo 
 
-1. Acceder a la AWS console, buscar el servicio Cloudfront.
+1. Acceder a la AWS console, buscar el servicio **Cloudfront**.
 
 <img src="img/ej1-access-to-cloudfront.png"></img>
 
