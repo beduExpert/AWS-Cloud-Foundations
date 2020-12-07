@@ -1,5 +1,5 @@
 
-# Sesión 2: Infraestructura y servicios en la nube
+# Sesión 1: Fundamentos de Cómputo en la Nube
 
 ## Objetivo
 
