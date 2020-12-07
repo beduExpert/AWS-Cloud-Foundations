@@ -1,5 +1,4 @@
-
-# Reto 02 
+# Reto 02 - Abre tu primera cuenta en Amazon Web Services
 
 ## 1. Objetivo
 
