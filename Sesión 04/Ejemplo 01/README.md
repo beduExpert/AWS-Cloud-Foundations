@@ -17,7 +17,7 @@
 
 <img src="img/ej1-access-to-user.png"><img>
 
-3. Click en "Añadir usuario(s)"
+3. Click en **Añadir usuario(s)**
 
 <img src="img/ej1-add-user.png"><img>
 
