@@ -1,54 +1,61 @@
-# Ejemplo 3 - Habilitar Macie
+# Ejemplo 3 
 
-# 1. Objetivo 🎯
+## 1. Objetivo 
 - En un bucket S3 buscar información sensible.
 
-# 2. Requisitos 📌
+## 2. Requisitos 
 - AWS CLI instalado y configurado.
 - Un bucket S3 con algunos archivos que simularán ser archivos con información sensible.
 
-# 3. Desarrollo 📑
+## 3. Desarrollo 
 
 1. Ingresar a la consola de AWS buscando el servicio Amazon Macie.
-![ej3-macie-get-start.png](ej3-macie-get-start.png)
+
+<img src="img/ej3-macie-get-start.png"></img>
 
 2. Habilitar Macie, al habilitarlo se genera un rol con la política necesaria para que el servicio acceda al servicio S3.
 
-![ej3-habilitar-macie.png](ej3-habilitar-macie.png)
+<img src="img/ej3-habilitar-macie.png"></img>
 
-![ej3-habilitar-macie-02.png](ej3-habilitar-macie-02.png)
+<img src="img/ej3-habilitar-macie-02.png"></img>
 
 3. Al habilitar el servicio, Macie  da un reporte de los buckets a los que tiene acceso. Habrá que ejecutar un trabajo de escaneo
 
-![ej3-macie-dashboard-01.png](ej3-macie-dashboard.png)
+<img src="img/ej3-macie-dashboard-01.png"></img>
 
 4. Se debe seleccionar el o los buckets para ser analizados.
 
-![ej3-buckets-selected.png](ej3-buckets-selected.png)
+<img src="img/ej3-buckets-selected.png"></img>
 
 
 5. Confirmar el bucket y el costo estimado.
-![ej3-macie-estimado.png](ej3-macie-estimado.png)
+
+<img src="img/ej3-macie-estimado.png"></img>
 
 6. Para no incurrir en costos periódicos se deberá seleccionar como trabajo único.
-![ej3-macie-periodicidad.png](ej3-macie-periodicidad.png)
+
+<img src="img/ej3-macie-periodicidad.png"></img>
 
 7. En la siguiente pantalla se pueden escoger identificadores personales, son patrones basados en regex o palabras clave que deben ser identificados como información sensible, por defecto Macie ya detecta nombres,direcciones y números de tarjetas de crédito.
-![ej3-identificadores-personales.png](ej3-identificadores-personales.png)
+
+<img src="img/ej3-identificadores-personales.png"></img>
 
 8. Se asigna un nombre y descripción para el trabajo.
-![ej3-macie-add-name-and-description.png](ej3-macie-add-name-and-description.png)
+
+<img src="img/ej3-macie-add-name-and-description.png"></img>
 
 9. Se revisan los datos configurados, de ser correctos se finaliza la configuración.
-![ej3-macie-config-review.png](ej3-macie-config-review.png)
+
+<img src="img/ej3-macie-config-review.png"></img>
 
 10. El trabajo comienza a ejecutarse.
-![ej3-macie-running-job.png](ej3-macie-running-job.png)
+
+<img src="img/ej3-macie-running-job.png"></img>
 
 11.  Completado el trabajo se tendrá acceso a un reporte de hallazgos.
 
-![ej3-macie-job-done.png](ej3-macie-job-done.png)
+<img src="img/ej3-macie-job-done.png"></img>
 
 12. Verificando el contenido del archivo se puede ver que son 4 nombres encontrados y reportados.
-![ej3-report-done.png](ej3-report-done.png)
 
+<img src="img/ej3-report-done.png"></img>
