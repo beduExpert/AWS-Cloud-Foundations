@@ -21,7 +21,7 @@
 
 3. Al habilitar el servicio, Macie  da un reporte de los buckets a los que tiene acceso. Habrá que ejecutar un trabajo de escaneo
 
-<img src="img/ej3-macie-dashboard-01.png"></img>
+<img src="img/ej3-macie-dashboard.png"></img>
 
 4. Se debe seleccionar el o los buckets para ser analizados.
 
