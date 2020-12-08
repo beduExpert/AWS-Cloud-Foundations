@@ -63,4 +63,4 @@ aws --region us-east-1 s3 cp .pgAdmin4.startup.log s3://facturas-personales
 
 <img src="img/ej2-upload-file.png"></img>
 
-Es de notar que los archivos se están cifrado de manera transparente al subirlos y descargarlos.
+Es de notar que los archivos se están cifrando de manera transparente al subirlos y descargarlos.
