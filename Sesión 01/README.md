@@ -3,7 +3,7 @@
 
 ## Objetivo
 
-- Tener el contexto histórico y la línea de evolución de la tecnología de servidores hasta este punto.
+- Reconocer el contexto histórico y la línea de evolución de la tecnología de servidores hasta este punto.
 
 ## Requisitos
 
