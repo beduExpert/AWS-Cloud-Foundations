@@ -150,7 +150,7 @@ d)  Se debe establecer el tamaño del bloque de direcciones IP que contendrá la
 
 ![pw1-private-subnet-01.png]img/(pw1-private-subnet-01.png)
 
-![pw1-subred-private-created.png](pw1-subred-private-created.png)
+![pw1-subred-private-created.png](img/pw1-subred-private-created.png)
 
 3. Para que las subredes tengan acceso a internet con el fin de instalar software o parches de seguridad es necesario habilitar un "NAT Gateway", para lo cual ir al menú "NAT Gateway" después click en "Create NAT gateway".
 
