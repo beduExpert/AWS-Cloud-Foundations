@@ -23,6 +23,6 @@
 
 - [Reto  05:  Simulador para armar una servidor](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2005)
 
--[Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2001/Postword.md)
+- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2001/Postword.md)
 
 
