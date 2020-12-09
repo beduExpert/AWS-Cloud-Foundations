@@ -12,7 +12,7 @@ Podrás interactuar con los servicios Core de AWS tanto de cómputo **(EC2)**, *
 
 Pondrás en práctica conceptos fundamentales para mantener una arquitectura confiables y segura, tales como: **Framework AWS Well Architectured**, el **modelo de responsabilidad compartida** y las **políticas de uso**. Además de las funciones para administración de usuarios, permisos y autenticación, así como las mejores prácticas sobre tolerancia a fallos, alta disponibilidad y recuperación ante desastres. 
 
-## Requerimientos?
+## Requerimientos
 
 No es necesario, pero sí recomendable tener conocimientos previos de programación y experiencia en el uso del sistema operativo Linux, así como estar familiarizado con los siguientes temas:
 
