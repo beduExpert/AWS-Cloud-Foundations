@@ -56,7 +56,7 @@
 
 <img src="img/error403.png">
 
-Esto es por que aún falta dar permiso explícitamente a los archivos en el bucket, para lo que habrá que dirigirse a los archivos en AWS Console, seleccionar todos los archivos y seleccionar "Hacer público"
+Esto es por que aún falta dar permiso explícitamente a los archivos en el bucket, para lo que habrá que dirigirse a los archivos en AWS Console, seleccionar todos los archivos y seleccionar **Hacer público**
 
 <img src="img/acceso-publico.png">
 
