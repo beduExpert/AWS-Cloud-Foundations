@@ -1,23 +1,22 @@
 # Reto 1
 
-
-# 1. Objetivo 🎯
+## 1. Objetivo 
 - Establecer las bases para la generación de menus interactivos en un ecommerce.
 
-
-# 2. Requisitos 📌
+## 2. Requisitos 
 - El ejercicio 1 resuelto y funcional.
 
+## 3. Desarrollo 
 
-# 3. Desarrollo 📑
+>**💡Nota**
+>
+>El siguiente ejemplo y código están destinados únicamente a fines educativos. Asegúrese de personalizarlo, probarlo y revisarlo por su cuenta antes de usar cualquiera de esto en producción.
 
-#### El siguiente ejemplo y código están destinados únicamente a fines educativos. Asegúrese de personalizarlo, probarlo y revisarlo por su cuenta antes de usar cualquiera de esto en producción.
-
-Elasticsearch permite ademas de búsquedas generar funciones de agregado.
+**Elasticsearch permite ademas de búsquedas generar funciones de agregado.**
 
 El resultado de la búsqueda con funciones de agregado puede ayudar a generar menús como el siguiente señalado.
-![r1-aggregate-review-01.png](r1-aggregate-review-01.png)
 
+<img src="img/r1-aggregate-review-01.png"></img>
 
 Para hacer una búsqueda basada en el `review` de los libros habrá que hacer a búsqueda en Elasticsearch con el siguiente Query DSL con la función de agregado [range](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-range-aggregation.html).
 
@@ -44,8 +43,7 @@ Para hacer una búsqueda basada en el `review` de los libros habrá que hacer a 
 
 El resultado deberá ser el siguiente, se muestran los rangos y el número de documentos (número de objetos) encontrados que cumplan los rangos.
 
-![r1-resulto-review-buckets-01.png](r1-resulto-review-buckets-01.png)
-
+<img src="img/r1-resulto-review-buckets-01.png"></img>
 
 Si el usuario final da click en alguna de las opciones en la página del ecommerce se podría hacer un Query DSL también de tipo [range](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html#range-query-ex-request) con la siguiente forma:
 
@@ -63,6 +61,5 @@ Si el usuario final da click en alguna de las opciones en la página del ecommer
 
 Con ello se regresarán todos los libros que tengan un `average_rating` menor o igual a 4.
 
-![r1-es-return-for-menuss-than-average-01.png](r1-es-return-for-menuss-than-average-01.png)
-
+<img src="img/r1-es-return-for-menuss-than-average-01.png"></img>
 
