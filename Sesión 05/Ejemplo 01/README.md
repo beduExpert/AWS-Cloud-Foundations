@@ -40,7 +40,7 @@ c) Es recomendable colocar una descripción.
 a) Establecer la llave identificadora.
 b) Agregar un atributo para `nombre` del producto.
 c) Agregar un atributo para el `precio` del producto.
-Click en agregar "Add table definition"
+Click en agregar **Add table definition**
 
 <img src="img/ej1-configure-new-table.png"></img>
 
@@ -48,11 +48,11 @@ Click en **Visualize data model**.
 
 <img src="img/ej1-new-table-done.png"></img>
 
-6. Para persistir el cambio ya en AWS (hasta ahora la tabla está solo configurada en la herramienta NoSQL Workbench) hacer click en "Commit to Amazon DynamoDB"
+6. Para persistir el cambio ya en AWS (hasta ahora la tabla está solo configurada en la herramienta NoSQL Workbench) hacer click en **Commit to Amazon DynamoDB**
 
 <img src="img/ej1-commit-dynamo-db-01.png"></img>
 
-7. Seleccionar la cuenta de AWS creada en IAM y dada de alta en AWS CLI, click en "commit".
+7. Seleccionar la cuenta de AWS creada en IAM y dada de alta en AWS CLI, click en **commit**.
 
 <img src="img/ej1-select-saved-connexion.png"></img>
 La tabla es generada.
