@@ -20,15 +20,15 @@
 
 <img src="img/ej1-search-in-pannel-es-01.png"></img>
 
-2. Dar click en "Crear nuevo dominio"
+2. Dar click en **Crear nuevo dominio**
 
 <img src="img/ej1-creane-new-domain-01.png"></img>
 
-3. Seleccionar "Desarrollo y pruebas"
+3. Seleccionar **Desarrollo y pruebas**
 
 <img src="img/ej1-select-instance-type-01.png"></img>
 
-4. (a) Establecer un nombre, este nombre solo debe tener minúsculas y guiones bajos sin espacios. (b) No habilitar el punto de enlace predeterminado.
+4. (a) Establecer un nombre, este nombre solo debe tener minúsculas y guiones bajos sin espaciosDesarrollo y pruebas. (b) No habilitar el punto de enlace predeterminado.
 
 <img src="img/ej1-select-a-domain-01.png"></img>
 
