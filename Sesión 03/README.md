@@ -22,6 +22,6 @@
 
 - [Reto 01: Permitir peticiones desde la IP de una VPN](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2003)
 
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2003/Reto%2001)
+- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2003/Postwork.md)
 
 
