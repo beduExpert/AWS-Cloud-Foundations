@@ -186,7 +186,7 @@ b) Seleccionar la VPC a la que se asociará el router, seleccionar la VPC recié
 9. Configurar las rutas como:
 a) Agregar la IP 0.0.0.0/0 con la que se especifica que cualquier tráfico que no sea perteneciente a la red de la VPC sea manejado por esta nueva regla.
 b) Seleccionar el NAT Gateway recién creado.
-![pw1-add-new-route-private.png](pw1-add-new-route-private.png)
+![pw1-add-new-route-private.png](img/pw1-add-new-route-private.png)
 
 ![pw1-route-private-edited-done.png](img/pw1-route-private-edited-done.png)
 
@@ -236,7 +236,7 @@ d) Se asigna el bloque de direcciones IP que la subred tendrá, para se asigna e
 ![pw1-table-route-resume.png](img/pw1-table-route-resume.png)
 
 El estatus del proyecto es el siguiente hasta este punto. Prácticamente todo el esquema de red esta listo para seguir construyendo sobre el.
-# TODO Actualizar imagen
+
 ![pw1-proyecto-avance-segunda-subred-privada.png](img/pw1-proyecto-avance-segunda-subred-privada.png)
 
 ----------------------------------------
