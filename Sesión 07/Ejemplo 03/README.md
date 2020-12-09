@@ -67,7 +67,8 @@ Donde `D:\downloads\IMDB-Movie-Data.csv` es la ruta del origen del archivo, reem
 <img src="img/ej3-glue-add-name-click-in-next-01.png"></img>
 
 9. Seleccionar las opciones por default
-![ej3-add crawler-01.png](ej3-add crawler-01.png)
+
+<img src="img/ej3-add crawler-01.png"></img>
 
 10. Seleccionar un origen de datos, en este caso S3, seleccionar la ruta de origen de datos que en este caso será la carpeta "origen" en el  bucket S3 recién creado.
 
