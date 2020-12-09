@@ -35,9 +35,9 @@ aws s3api put-object --bucket my-glue-etl-job-01 --key destino/
 
 <img src="img/ej3-create-bucket-s3-origin-destino-folders.png"></img>
 
-3. Descargar los datos que se van a procesar desde:
-https://raw.githubusercontent.com/peetck/IMDB-Top1000-Movies/master/IMDB-Movie-Data.csv
- Guardar el archivo en una ubicación conocida. Normalmente se puede hacer dando click derecho sobre la página y seleccionando "Guardar como"
+3. Descargar los [datos](https://raw.githubusercontent.com/peetck/IMDB-Top1000-Movies/master/IMDB-Movie-Data.csv) que se van a procesar.
+
+Guardar el archivo en una ubicación conocida. Normalmente se puede hacer dando click derecho sobre la página y seleccionando **Guardar como**
  
  <img src="img/ej3-save-as-csv-database-imdb-01.png"></img>
  
