@@ -14,7 +14,7 @@ Pondrás en práctica conceptos fundamentales para mantener una arquitectura con
 
 ## Requerimientos
 
-No es necesario, pero sí recomendable tener conocimientos previos de programación y experiencia en el uso del sistema operativo Linux, así como estar familiarizado con los siguientes temas:
+No es necesario, pero sí recomendable tener **conocimientos previos de programación** y experiencia en el uso del **Sistema Operativo Linux**, así como estar familiarizado con los siguientes temas:
 
 + Redes y sistemas
 + Bases de datos SQL
