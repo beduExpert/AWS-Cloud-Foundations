@@ -26,7 +26,7 @@ Una política insertada es una política que no puede ser rehusada ya que solo e
 
 <img src="img/r1-add-shared-policy.png"></img>
 
-5. Creada la política habrá que dirigirse a "Grupos"
+5. Creada la política habrá que dirigirse a **Grupos**
 
 <img src="img/r1-add-group-menu.png"></img>
 
