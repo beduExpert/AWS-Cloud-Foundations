@@ -4,7 +4,7 @@
 
 Este curso sirve como preparación para la certificación [AWS Cloud Practitioner (CLF-C01)](https://aws.amazon.com/es/certification/certified-cloud-practitioner/) que valida los conocimientos del ecosistema AWS a nivel practicante, es decir, serás capaz de diseñar y proponer soluciones centradas en los servicios e infraestructura que ofrece AWS en la nube con la finalidad de soportar el desarrollo, despliegue y consumo de aplicaciones web.
 
-<img src="assets/character.svg" width="400px">
+<img src="assets/character.svg" width="250px" aling="right">
 
 
 El curso también sirve como una introducción a los principales conceptos del cómputo en la nube desde un enfoque tanto de gestión y negocio como práctico. Con los conocimientos adquiridos el podrás armar casos de negocios que consideren los beneficios de diferentes tipos y niveles de servicio que ofrece AWS frente a otras alternativas (Google, IBM, Microsoft, etc.).
@@ -13,7 +13,7 @@ Entenderás los economics y herramientas que te permitirán optimizar los costos
 
 Podrás interactuar con los servicios Core de AWS tanto de cómputo (EC2), redes y distribución de contenido, almacenamiento, integración de aplicaciones, administración y gobernanza.
 
-<img src="assets/character2.svg" width="400px">
+<img src="assets/character2.svg" width="250px" aling="right">
 
 Pondrás en práctica conceptos fundamentales para mantener una arquitectura confiables y segura, tales como: Framework AWS Well Architectured, el modelo de responsabilidad compartida y las políticas de uso. Además de las funciones para administración de usuarios, permisos y autenticación, así como las mejores prácticas sobre tolerancia a fallos, alta disponibilidad y recuperación ante desastres. 
 
