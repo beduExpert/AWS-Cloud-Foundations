@@ -24,15 +24,15 @@
  
 <img src="img/Zona alojada.png">
 
-5. Click en "Crear un registro"
+5. Click en **Crear un registro**
 
 <img src="img/crear-registro.png">
 
-6. Seleccionar la política de redireccionamiento como "Direccionamiento sencillo"
+6. Seleccionar la política de redireccionamiento como **Direccionamiento sencillo**
 
 <img src="img/redireccionamiento-sencillo.png">
 
-7. Dar Click en "Definir un registro "
+7. Dar Click en **Definir un registro**
 
 <img src="img/configurar-registro.png">
 
@@ -64,6 +64,6 @@ Esto es por que aún falta dar permiso explícitamente a los archivos en el buck
 
 <img src="img/aceptar-accceso-publico.png">
 
-14. Felicidades, el bucket esta preparado para alojar el sitio web estático del proyecto. En el futuro bastará con reemplazar los archivos.
+14. **🎉Felicidades**, el bucket esta preparado para alojar el sitio web estático del proyecto. En el futuro bastará con reemplazar los archivos.
 
 <img src="img/is-done.png">
