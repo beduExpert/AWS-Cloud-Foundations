@@ -1,18 +1,16 @@
-## Postwork Sesión 1
+## Postwork 
 
-<div style="text-align: justify;">
-
-### 1. Objetivos :dart:
+## 1. Objetivos 
 
 - Expandir los conceptos vistos en la sesion de trabajo
 
-### 2. Requisitos :clipboard:
+## 2. Requisitos 
 
-1. Navegador web e internet
+* Navegador web e internet
 
-### 3. Desarrollo :rocket:
+## 3. Desarrollo 
 
-#### Para el planteamiento del proyecto conviene conocer:
+### Para el planteamiento del proyecto conviene conocer:
 
 - [Zonas desmilitarizadas](es.wikipedia.org/wiki/Zona_desmilitarizada_(informática))
 
