@@ -4,6 +4,7 @@
 - Uso básico de DynamoDB como base de datos no relacional por medio de interfaz gráfica.
 
 ## 2. Requisitos 
+
 - Credenciales IAM con acceso mediante programación con acceso a DynamoDB, las credenciales deben ser dadas de alta en AWS CLI con el comando `aws configure`
 
 <img src="img/ej1-iam-role-01.png"></img>
