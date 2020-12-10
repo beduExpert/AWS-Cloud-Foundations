@@ -11,14 +11,14 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Funcionalidad de un web serverObjetivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2005/Ejemplo%2001)
+- [Ejemplo 01: Servicios que están siendo ejecutados o consumidos AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2008/Ejemplo%2001)
 
-- [Ejemplo  02: Amazon Keyspaces](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2005/Ejemplo%2002)
+- [Ejemplo  02: Amazon Rekognition](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2008/Ejemplo%2002)
 
-- [Reto 01: CRUD con DynamoDB](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2005/Reto%2001)
+- [Ejemplo  03: Services de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2008/Ejemplo%2003)
 
-- [Reto 02: Administración de una base de datos Keyspaces](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2005/Reto%2002)
+- [Reto 01: Administrar un servicio DNS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2005/Reto%2002)
 
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2005/Postwork.md)
+- [Postwork]()
 
 
