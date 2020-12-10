@@ -244,7 +244,7 @@ f) Deshabilitar la opción.
 ![pw-create-route53-register-02.png](img/pw-create-route53-register-02.png)
 
 Segundos después el registro es creado
-![pw-route53-regiser-done.png](pw-route53-regiser-done.png)
+![pw-route53-regiser-done.png](img/pw-route53-regiser-done.png)
 
 14. Cinco minutos después de generado el registro al hacer ping ya hay una resolución del subdominio `api`, esperar hasta que el ping tenga resolución a una IP. (Notar que el balanceador no responderá al ping, es normal ya que el balanceador solo tiene permitido por el grupo de seguridad y la propia configuracion del balanceador majenar tráfico de los puertos 80 y 443 es decir HTTP y HTTPS)
 
