@@ -47,7 +47,7 @@ Para asegurar el tráfico sobre el protocolo https se generará un certificado d
 
 ![aws-certificate-ownership-done.png](img/aws-certificate-ownership-done.png)
 
-![pw-certificado-emitido.png]img/(pw-certificado-emitido.png)
+![pw-certificado-emitido.png](img/pw-certificado-emitido.png)
 
 
 El paso siguiente: Ya se cuenta con un sitio servido por Cloudfront, para asegurar el tráfico https es necesario hacer los siguientes pasos:

@@ -1,5 +1,5 @@
 
-# Sesión 1: Fundamentos de Cómputo en la Nube
+# Sesión 01: Fundamentos de Cómputo en la Nube
 
 ## Objetivo
 

@@ -1,5 +1,5 @@
 
-# Sesión 3: Contenido y redes en AWS
+# Sesión 03: Contenido y redes en AWS
 
 ## Objetivo
 
