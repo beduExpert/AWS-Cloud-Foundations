@@ -4,7 +4,7 @@
 - Generar una instancia de base de datos administrada para el guardado de datos de la aplicación.
 
 
-# 2. Requisitos 
+## 2. Requisitos 
 - Acceso con AWS Console.
 - Una VPC configurada con dos subredes privadas en diferentes zonas de disponibilidad.
 
@@ -20,7 +20,7 @@
 ![pw-subnet-group-select.png](img/pw-subnet-group-select.png)
 
 
-![pw-create-db-subnet-group.png]img/(pw-create-db-subnet-group.png)
+![pw-create-db-subnet-group.png](img/pw-create-db-subnet-group.png)
 
 3. Se configura el grupo de subred como:
 a) Se debe especificar un nombre descriptivo.
