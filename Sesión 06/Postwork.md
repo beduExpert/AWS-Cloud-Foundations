@@ -173,7 +173,7 @@ Ejemplo: ![pw-check-sql-connexion.png](img/pw-check-sql-connexion.png)
 
 - Especificar que los cambios se generen inmediatamente, luego dar click en **Modify DB instance**.
 
-![pw-modify-rds-instance-start.png](pw-modify-rds-instance-start.png)
+![pw-modify-rds-instance-start.png](img/pw-modify-rds-instance-start.png)
 
 - El cambio es prácticamente instantáneo.
  ![pw-rds-modify-rds-instance-done.png](img/pw-rds-modify-rds-instance-done.png)
@@ -181,7 +181,7 @@ Ejemplo: ![pw-check-sql-connexion.png](img/pw-check-sql-connexion.png)
 
 Regresando a la linea de comandos (si deja de responder solo refrescar pantalla con F5) se puede corroborar la conexión a la instancia de base de datos, incluso se pueden listar las bases de datos, tener el nombre de la base de datos en cuenta.
 
-![pw-database-connexion-done.png](pw-database-connexion-done.png)
+![pw-database-connexion-done.png](img/pw-database-connexion-done.png)
 
 4. Para seguir con el ejemplo, se deberá ejecutar en la linea de comando el siguiente comando
 ```ssh
