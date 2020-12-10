@@ -48,11 +48,13 @@ Para editar datos se hará por medio de la consola de comandos CQL (Cassandra Qu
 
 7. Al dar click en tablas se pueden observar las tablas donde se guarda la información, estas tablas ya vienen pre cargadas con información.
 
-<img src="img/ej2-view-tables-keyspaces.png"></img>
+<img src="img/ej2-view-tables-keyspaces.png">
 
-8. Click en "Editor CQL"
+8. Click en **Editor CQL**
 
-<img src="img/ej2-goto-editor-sql.png"></img>
+
+<img src="img/ej2-goto-editor-sql.png">
+
 
 9. Ejecutar el comando `select * from creditcard.transactions_by_creditcard_num` (a,b), CQL es muy similar a SQL de otras bases de datos. Se visualiza un error al ejecutar la consulta (c), al query se debe agregar un `keyspace`, ¿cuál keyspace debo agregar?, click en "Espacios de claves" (c) para descubrirlo.
 

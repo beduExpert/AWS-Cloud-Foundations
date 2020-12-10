@@ -3,7 +3,7 @@
 ## 1. Objetivo 
 - Usar el servicio Amazon Rekognition para Detección de escenas, detección de matrículas y análisis facial.
 
-## 2. Requisitos 📌
+## 2. Requisitos 
 - AWS CLI instalado y configurado.
 
 ## 3. Desarrollo 
