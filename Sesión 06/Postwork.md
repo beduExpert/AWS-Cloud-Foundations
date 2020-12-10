@@ -157,18 +157,18 @@ Ejemplo: ![pw-check-sql-connexion.png](img/pw-check-sql-connexion.png)
 
 ![pw-databases-ckick-on.png](img/pw-databases-ckick-on.png)
 
-- Seleccionar al instancia y luego dar click en "Modify"
+- Seleccionar al instancia y luego dar click en **Modify**
 
 ![pw-modify-instance.png](img/pw-modify-instance.png)
 
-- Hacer scroll hasta la parte de "Connectivity", aquí se observa el problema, se tiene un grupo de seguridad por defecto, habrá que cambiar el grupo para explícitamente permitir el tráfico al puerto 5432.
+- Hacer scroll hasta la parte de **Connectivity**, aquí se observa el problema, se tiene un grupo de seguridad por defecto, habrá que cambiar el grupo para explícitamente permitir el tráfico al puerto 5432.
 
 ![pw-bad-security-group.png](img/pw-bad-security-group.png)
 
 - Se selecciona el grupo de seguridad adecuado para el tráfico de Postgres en el puerto 5432.
 ![pw-modify-connectivity.png](img/pw-modify-connectivity.png)
 
-- Hacer scroll al final de la pantalla y dar click en "Continuar"
+- Hacer scroll al final de la pantalla y dar click en **Continuar**
 ![pw-rds-continue-modify.png](img/pw-rds-continue-modify.png)
 
 - Especificar que los cambios se generen inmediatamente, luego dar click en **Modify DB instance**.
