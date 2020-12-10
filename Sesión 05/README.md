@@ -1,10 +1,9 @@
-
 # Sesión 05: Almacenamiento con AWS
 
 ## Objetivo
 
 - Identificar los distintos tipos de storage que ofrece AWS.
-Enlistar los usos más comunes para cada tipo de storage.‌
+- Enlistar los usos más comunes para cada tipo de storage.‌
 
 ## Requisitos
 
