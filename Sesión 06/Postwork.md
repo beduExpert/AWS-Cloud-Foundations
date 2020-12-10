@@ -149,24 +149,24 @@ psql -h <endpoint del host> -U <usuario_de_base_datos>
 
 Ejemplo: ![pw-check-sql-connexion.png](img/pw-check-sql-connexion.png)
 
-¡En este caso hay un problema!, no se logra la conexión con la base de datos, al no lograr conexión, lo primero que hay que hay que verificar son los grupos de seguridad, recordar que los grupos de seguridad actuan como un firewall, para lo que habrá que dirigirse a la sección de RDS.
+**¡En este caso hay un problema!**, no se logra la conexión con la base de datos, al no lograr conexión, lo primero que hay que hay que verificar son los grupos de seguridad, recordar que los grupos de seguridad actuan como un firewall, para lo que habrá que dirigirse a la sección de RDS.
 
 ![pw-redirect-to-rds-panel.png](img/pw-redirect-to-rds-panel.png)
 
 - Click en **Databases**
 
-![pw-databases-ckick-on.png](pw-databases-ckick-on.png)
+![pw-databases-ckick-on.png](img/pw-databases-ckick-on.png)
 
 - Seleccionar al instancia y luego dar click en "Modify"
 
-![pw-modify-instance.png](pw-modify-instance.png)
+![pw-modify-instance.png](img/pw-modify-instance.png)
 
 - Hacer scroll hasta la parte de "Connectivity", aquí se observa el problema, se tiene un grupo de seguridad por defecto, habrá que cambiar el grupo para explícitamente permitir el tráfico al puerto 5432.
 
-![pw-bad-security-group.png](pw-bad-security-group.png)
+![pw-bad-security-group.png](img/pw-bad-security-group.png)
 
 - Se selecciona el grupo de seguridad adecuado para el tráfico de Postgres en el puerto 5432.
-![pw-modify-connectivity.png](pw-modify-connectivity.png)
+![pw-modify-connectivity.png](img/pw-modify-connectivity.png)
 
 - Hacer scroll al final de la pantalla y dar click en "Continuar"
 ![pw-rds-continue-modify.png](img/pw-rds-continue-modify.png)
