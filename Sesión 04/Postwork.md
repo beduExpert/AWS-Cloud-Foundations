@@ -39,7 +39,7 @@ Para asegurar el tráfico sobre el protocolo https se generará un certificado d
 
 8. Las instrucciones para comprobar la propiedad del certificado son generadas, en el caso de manejar el DNS con Route 53 el registro CNAME es generado automáticamente, en caso de no manejar el DNS con Route 53 se tendrá que generar el registro CNAME de forma manual con los valores que aparecen en las instrucciones.
 
-![pw-dns-01.png](img/pw-dns-01.png)
+![pw-dns-01.png](img//pw-dns-01.png)
 
 ![pw-Certificate-manager-dns-02.png](img/pw-Certificate-manager-dns-02.png)
 
