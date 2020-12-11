@@ -26,6 +26,6 @@ Aplicar las mejores prácticas en el entorno AWS de manera consistente a lo larg
 
 - [Reto 02: Notificar los cambios por medio de SMS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Reto%2001)
 
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2006/Postwork.md)
+- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2007/Postwork.md)
 
 
