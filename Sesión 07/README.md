@@ -1,4 +1,4 @@
-# Sesión 06: Arquitectura AWS
+# Sesión 07: Arquitectura AWS
 
 ## Objetivo
 
@@ -16,11 +16,11 @@ Aplicar las mejores prácticas en el entorno AWS de manera consistente a lo larg
 
 ## Organización de la clase
 
-- [Ejemplo 01: Explorar el modelo de computación en la nube Serverless.](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2001)
+- [Ejemplo 01: Explorar el modelo de computación en la nube Serverless](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2001)
 
-- [Ejemplo 02: Repositorio para alojar código.](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2002)
+- [Ejemplo 02: Repositorio para alojar código](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2002)
 
-- [Ejemplo 03: Normalizar los datos .](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2002)
+- [Ejemplo 03: Normalizar los datos](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2002)
 
 - [Reto 01: Menús interactivos en un ecommerce](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Reto%2001)
 
