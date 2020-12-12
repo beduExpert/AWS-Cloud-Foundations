@@ -2,6 +2,7 @@
 
 
 ## 1. Objetivo 
+
 - Aprender como hacer despliegue automático de un aplicación web (la misma que ya se había trabajado anteriormente) en instancias que escalan automáticamente, la aplicación se ejecutará en una instancia de Docker. La idea es que además el despliegue sea orquestado de manera automática en instancias generadas también de manera automática, dicha generación de instancias estará a cargo del servicio `Elastic Comtainer Service`
 
 ## 2. Requisitos 
@@ -12,8 +13,9 @@
 
 ## 3. Desarrollo 
 
-
-#### El siguiente ejemplo y código están destinados únicamente a fines educativos. Asegúrese de personalizarlo, probarlo y revisarlo por su cuenta antes de usar cualquiera de esto en producción.
+> **💡Nota:**
+>
+> El siguiente ejemplo y código están destinados únicamente a fines educativos. Asegúrese de personalizarlo, probarlo y revisarlo por su cuenta antes de usar cualquiera de esto en producción.
 
 
 Anteriormente ya se tenía trabajando un balanceador de carga, el balanceador redirigía el tráfico hacia instancias EC2, en ellas se tenía Docker ejecutándose. Si se requería hacer un nuevo despliegue con una nueva versión se requiere regenerar la imagen, entrar a las instancias EC2 y manualmente ejecutar el comando `docker pull` para actualizar la imagen con la nueva versión del software. 
