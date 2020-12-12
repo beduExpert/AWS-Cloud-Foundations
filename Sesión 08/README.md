@@ -17,8 +17,6 @@
 
 - [Ejemplo  03: Services de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2008/Ejemplo%2003)
 
-- [Reto 01: Administrar un servicio DNS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2008/Reto%2001)
-
 - [Postwork]()
 
 

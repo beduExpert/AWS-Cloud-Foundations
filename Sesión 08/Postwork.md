@@ -39,7 +39,6 @@ Para ello las instancias del cluster deberán tener permiso para poderse comunic
 ![pw-ecs-see-task-definition-01.png](img/pw-ecs-see-task-definition-01.png)
 
 
-
 4. Dar click en el "Task role"
 
  ![pw-ecs-access-to-task-role-01.png](img/pw-ecs-access-to-task-role-01.png)
