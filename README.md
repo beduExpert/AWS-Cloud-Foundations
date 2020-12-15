@@ -33,3 +33,4 @@ El FrontEnd y el BackEnd en algún momento tendrán que realizar alguna tarea as
 Toda esta infraestructura debe tener un certificado de seguridad para operar, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto.Todo el código para probar el FrontEnd y BackEnd lo podemos bajar en algún proyecto ya hecho, así no sería necesario programar una aplicación desde 0.
 
 <img src="assets/arquitectura-Infra.jpg">
+test
