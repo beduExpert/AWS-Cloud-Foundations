@@ -24,12 +24,20 @@ No es necesario, pero sí recomendable tener **conocimientos previos de programa
 
 ## Proyecto
 
-Subir una aplicación web con Amazon Web Services, que se estará dividido en FrontEnd y BackEnd.
+El proyecto contempla el uso de varios servicios de AWS con el fin de adquirir la visibilidad como todos ellos operan en conjunto.
+Se simulará un formulario de contacto de clientes o captador de clientes (leads), al momento de que el usuario final llene los campos y de click en el botón de envío se enviarán los datos a un balanceador de carga, el balanceador de carga con su certificado SSL reenviará los datos a alguna de las intancias que estén ejecutando el código que se encargará de tomar la información y guardarla en base de datos además de despachar la información necesaria para dar aviso a un número celular en cuanto un nuevo usuario deje sus datos de contacto.
 
-El **FrontEnd** reside en S3 con Cloud CDN y se conectará con el **BackEnd** por medio de un balanceador de carga y  el BackEnd tendrá la capacidad de escalar en horizontal si la carga de trabajo lo requiere y a su vez se conecta a una base de datos RDS en una red privada (dicha base de datos se diseña con un RTO y RPO para hacer los backups).
+En general consistirá en las siguientes partes:
 
-El FrontEnd y el BackEnd en algún momento tendrán que realizar alguna tarea asíncrona, por lo cual es necesario que esa tarea sea hecha en segundo plano (Ej: un reporte), está tarea se almacena en un SQS y eventualmente esa información sea consumida por una Lambda que será quien haga esa tarea en segundo plano enviando el resultado por email. 
+- Una interfáz hosteada en S3 con HTML,CCS y Javascript, esta será la parte de cara al usuario final.
+- Un balanceador de carga con su certificado SSL para que la información viaje segura.
+- Un par de instancias EC2 de AWS, el código se ejecutará en contenedores Docker.
+- Se tendrá un servicio SMS listo para el envío de mensajes al tener un nuevo cliente.
 
-Toda esta infraestructura debe tener un certificado de seguridad para operar, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto.Todo el código para probar el FrontEnd y BackEnd lo podemos bajar en algún proyecto ya hecho, así no sería necesario programar una aplicación desde 0.
+Se recomienda encarecidamente que todo el proyecto sea generado en una misma unidad regional, en este curso se estará usando la región `us-east-1`.
+
+
+
+Toda esta infraestructura debe tener un certificado de seguridad para operar, será usado AWS Certificate Manager para generarlo, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto. 
 
 <img src="assets/arquitectura-Infra.jpg">
