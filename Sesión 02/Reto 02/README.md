@@ -21,7 +21,7 @@ Se desea copiar el contenido de un bucket a otro bucket en la misma cuenta de AW
 
 **Planteamiento 2**
 
-No es óptimo en costos  y tiempo seguir ese esquema, al descargar los datos a local genera consto de transferencia, sin contar que el ancho de banda hacia local es menor, una mejor opción es transferir los archivos de bucket a bucket, con lo que no habrá costos de transferencia de datos y será mucho mas rápido pues AWS tiene conexiones de baja latencia.
+No es óptimo en costos  y tiempo seguir ese esquema, al descargar los datos a local genera consto de transferencia, sin contar que el ancho de banda hacia local es menor, una mejor opción es transferir los archivos de bucket a bucket, con lo que no habrá costos de transferencia de datos y será mucho más rápido pues AWS tiene conexiones de baja latencia.
 
 **¿Qué comando se requiere ejecutar para copiar todos los archivos de un bucket a otro?**
 

@@ -98,7 +98,7 @@ Copiar los datos de a) y b), mantenerlos presentes en todo momento.
 
 ![pw-get-password-01.png](img/pw-get-password-01.png)
 
-**¡Listo!**, finalmente se ha avanzado un peldaño mas en la realización del proyecto. El diagrama queda como sigue.
+**¡Listo!**, finalmente se ha avanzado un peldaño más en la realización del proyecto. El diagrama queda como sigue.
 
 ![project-final-status.png](img/project-final-status.png)
 

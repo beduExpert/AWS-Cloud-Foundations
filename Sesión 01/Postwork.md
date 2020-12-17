@@ -14,7 +14,7 @@
 
 - [Zonas desmilitarizadas](es.wikipedia.org/wiki/Zona_desmilitarizada_(informática))
 
-- [Lista de puertos mas usados](https://docs.opencloud.cl/tutoriales/servidores/lista-de-puertos-mas-comunmente-utilizados.html)
+- [Lista de puertos más usados](https://docs.opencloud.cl/tutoriales/servidores/lista-de-puertos-mas-comunmente-utilizados.html)
 
 - [¿Cómo funciona el protocolo DNS?](https://www.verisign.com/es_LA/website-presence/online/how-dns-works/index.xhtml)
 

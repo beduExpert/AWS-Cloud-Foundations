@@ -139,7 +139,7 @@ a) Seleccionar imagen administrada
 b) Seleccionar el sistema operativo Amazon Linux 2
 c) Seleccionar "Standard"
 d) Seleccionar la imagen más reciente
-e) Seleccionar la imagen mas reciente de la imagen
+e) Seleccionar la imagen más reciente de la imagen
 f) Seleccionar tipo de entorno "Linux"
 g) Habilitar el modo "privilegiado" ya que se generará una imagen de Docker.
 
