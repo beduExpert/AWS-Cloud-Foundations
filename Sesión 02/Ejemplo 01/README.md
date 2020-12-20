@@ -5,7 +5,7 @@
 
 ## 2. Requisitos 
 - Sistema operativo actualizado.
-- Python 3.4+ instalado. [¿Cómo instalar?](https://aws.amazon.com/es/blogs/developer/deprecation-of-python-2-6-and-python-3-3-in-botocore-boto3-and-the-aws-cli/).
+- Python 3.4 o superior instalado. [¿Cómo instalar?](https://aws.amazon.com/es/blogs/developer/deprecation-of-python-2-6-and-python-3-3-in-botocore-boto3-and-the-aws-cli/).
 - Fecha y hora correcta en el equipo local.
 
 ## 3. Desarrollo 

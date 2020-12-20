@@ -8,7 +8,7 @@
 
 - AWS CLI instalado y configurado.
 - Tener presente la documentación de [AWS CLI](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html) como referencia.
-- Un bucket con archivos precargados.
+- Un bucket con archivos pre cargados.
 - Un bucket vacío.
 
 ## 3. Desarrollo  

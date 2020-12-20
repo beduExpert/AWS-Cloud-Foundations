@@ -8,7 +8,7 @@
 ## 2. Requisitos 
 - Acceso a AWS Console (WEB)
 - Comprender como funciona un balanceador de carga
-- Conocimientos básicos de docker
+- Conocimientos básicos de Docker
 - Cliente de git para manejo de código en repositorios de git
 
 ## 3. Desarrollo 

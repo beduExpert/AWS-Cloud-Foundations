@@ -29,7 +29,7 @@ Se simulará un formulario de contacto de clientes o captador de clientes (leads
 
 En general consistirá en las siguientes partes:
 
-- Una interfáz hosteada en S3 con HTML,CCS y Javascript, esta será la parte de cara al usuario final.
+- Una interfaz hosteada en S3 con HTML,CCS y Javascript, esta será la parte de cara al usuario final.
 - Un balanceador de carga con su certificado SSL para que la información viaje segura.
 - Un par de instancias EC2 de AWS, el código se ejecutará en contenedores Docker.
 - Se tendrá un servicio SMS listo para el envío de mensajes al tener un nuevo cliente.

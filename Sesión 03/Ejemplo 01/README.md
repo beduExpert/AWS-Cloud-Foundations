@@ -2,7 +2,7 @@
 
 
 ## 1. Objetivo 
-- Servir el contenido del bucket que hostea la página web con Cloudfront.
+- Servir el contenido del bucket que hostea la página web con CloudFront.
 
 ## 2. Requisitos 
 - Acceso a una cuenta de AWS por medio de AWS Console

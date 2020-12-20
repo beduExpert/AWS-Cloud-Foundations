@@ -2,11 +2,11 @@
 
 # 1. Objetivo 🎯
 
-- Expandir los conceptos vistos en la sesion de trabajo
+- Expandir los conceptos vistos en la sesión de trabajo
 
 ## 2. Requisitos 📋
 
-* Navegador web e internet
+* Navegador web e Internet
 
 # 3. Desarrollo 📑
 
