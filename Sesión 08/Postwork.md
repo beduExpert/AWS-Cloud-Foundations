@@ -3,6 +3,9 @@
 ## 1. Objetivo 
 - Integración de servicios de Messaging, servicios para la comunicación entre servicios de AWS.
 
+![pw-a-donde-vamos-01.png](img/pw-a-donde-vamos-01.png)
+
+
 ## 2. Requisitos
 - AWS CLI configurado
 - Acceso a AWS consola.

@@ -3,6 +3,9 @@
 ## 1. Objetivo 
 - Conocer el bastión básico para la ejecución de cómputo en la nube con EC2, dentro de las instancias EC2 se ejecutará un contenedor de Docker, el contenedor obtendrá los datos para guardarlos en base de datos relacional. 
 
+![pw-a-donde-vamos-01.png](img/pw-a-donde-vamos-01.png)
+
+
 ## 2. Requisitos 
 - Acceso a la consola de AWS (log)
 - Una base de datos RDS generada, tener contraseña, usuario, url (Endpoint ) de la instancia.

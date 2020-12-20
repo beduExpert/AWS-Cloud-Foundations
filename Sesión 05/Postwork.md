@@ -3,6 +3,8 @@
 ## 1. Objetivo 
 - Generar una instancia de base de datos administrada para el guardado de datos de la aplicación.
 
+![pw-a-donde-vamos.png](img/pw-a-donde-vamos.png)
+
 
 ## 2. Requisitos 
 - Acceso con AWS Console.

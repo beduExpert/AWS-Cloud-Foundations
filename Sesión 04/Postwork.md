@@ -1,7 +1,12 @@
 ## Postwork
 
 ## 1. Objetivo 
-- Asegurar el cifrado de información en tránsito para el bucket configurado como servidor web estático de la sesión 2.
+- Asegurar el cifrado de información en tránsito para el bucket configurado como servidor web estático de la sesión 2 con el servicio CLoudFront.
+
+
+![27acdf95dd36935f912ac3df63651c1e.png](img\27acdf95dd36935f912ac3df63651c1e.png)
+
+
 
 ## 2. Requisitos 
 - Acceso a una cuenta de AWS por medio de AWS Console

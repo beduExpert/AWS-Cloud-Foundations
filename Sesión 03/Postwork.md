@@ -1,4 +1,4 @@
-# Postwork
+ # Postwork
 
 
 ## 1. Objetivo 
@@ -148,7 +148,7 @@ b) Seleccionar la VPC donde se asociará la subnet privada, seleccionar la VPC r
 c) Esta vez no se le dejará la decisión a AWS de que zona de disponibilidad usar. Seleccionar la primera en la lista.
 d)  Se debe establecer el tamaño del bloque de direcciones IP que contendrá la red privada. Hay que notar que el bloque comienza en la dirección 128, la idea es dejar los primeros (0-127) 128 bloques disponibles para redes publicas y los restantes (128-256) para redes privadas.  
 
-![pw1-private-subnet-01.png]img/(pw1-private-subnet-01.png)
+![pw1-private-subnet-01.png](img/pw1-private-subnet-01.png)
 
 ![pw1-subred-private-created.png](img/pw1-subred-private-created.png)
 
@@ -199,9 +199,6 @@ b) Dar click en "Edit subnet Associations"
 12. Seleccionar la subred privada manejada por esta tabla de routeo.
 ![pw1-add-subnet-to-route-table.png](img/pw1-add-subnet-to-route-table.png)
 
-Hasta ahora este es el estado del proyecto:
-
-![pw1-add-private-subnet](img/pw1-add-private-subnet.png)
 
 --------------------------------
 

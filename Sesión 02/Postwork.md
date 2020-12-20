@@ -3,6 +3,9 @@
 ## 1. Objetivo 
 - Configurar un bucket S3 con un sitio estático servido por un nombre de dominio propio.
 
+<img src="img/pw-hacia-donde-vamos-01.png"/>
+
+
 ## 2. Requisitos 
 - AWS CLI instalado y funcionando. 
 - Acceso a AWS Console.

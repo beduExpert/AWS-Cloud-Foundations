@@ -5,6 +5,9 @@
 
 - Aprender como hacer despliegue automático de un aplicación web (la misma que ya se había trabajado anteriormente) en instancias que escalan automáticamente, la aplicación se ejecutará en una instancia de Docker. La idea es que además el despliegue sea orquestado de manera automática en instancias generadas también de manera automática, dicha generación de instancias estará a cargo del servicio `Elastic Comtainer Service`
 
+![pw-a-donde-vamos-01.png](img/pw-a-donde-vamos-01.png)
+
+
 ## 2. Requisitos 
 - Acceso a AWS Console (WEB)
 - Comprender como funciona un balanceador de carga
