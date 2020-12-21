@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-- Identificar los distintos tipos de storage que ofrece AWS.
+- Identificar los distintos tipos de storage que ofrece AWS, poniendo en practica el uso de base de datos no relacional (DynamoDB, AWS Keyspaces) de AWS y de base de datos relacional (RDS)
 - Enlistar los usos más comunes para cada tipo de storage.‌
 
 ## Requisitos
