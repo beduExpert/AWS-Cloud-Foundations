@@ -4,8 +4,9 @@
 
 ## 2. Requisitos
 
-* AWS CLI instalado
-* Tarjeta de  crédito
+* AWS CLI instalado.
+* Tarjeta de crédito o débito a la que se cargarán los costos de los
+servicios de AWS usados.
 
 ## Desarrollo
 

@@ -19,7 +19,7 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 
 > **💡 Nota:**
 >
->Para este ejercicio vamos a usar un dominio publico. 
+>Para este ejercicio vamos a usar un dominio público. 
 
 1. Ingresar a Freenom y acceder por medio de gmail.
 
