@@ -59,3 +59,8 @@
 12. Verificando el contenido del archivo se puede ver que son 4 nombres encontrados y reportados.
 
 <img src="img/ej3-report-done.png"></img>
+
+
+> 💡**Nota:**
+>
+> Hay que aclarar sobre el costo de Macie, a diferencia de otros servicios de AWS, Macie cobra 10 centavos de dólar por el simple hecho de haber dado de alta un bucket en el servicio, si se agregan 10 buckets se cobrarían 10 dólares al fianl de mes, esos 10 dólares son independientes de las tareas de ejecucion de Macie, dependiendo de la cantidad de datos procesados en GB en cada tarea de búsqueda será el monto dle cobro, se cobra 1 dólar por cada GB de datos procesados, así si cada uno de esos 10 buckets tiene 2 GB de datos para procesar, se estarían pagando 20 dólares de procesamiento de datos, para al final en total pagar 10 dólares por los 10 buckets dados de alta y otros 20 por los 20 GB de datos procesados dando un total de 30 dólares al final de mes. 
