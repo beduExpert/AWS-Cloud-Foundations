@@ -4,10 +4,9 @@
 ## Objetivos
 
 - Conocer la interfaz de AWS Console (portal web).
-- Comprender las formas de interacción con los servicios de AWS.
-- Explorar la taxonomía de la infraestructura global de AWS.
-- Conocer los servicios principales de AWS.
-- Ventajas que representa consumir servicios en la nube.
+- Comprender las formas de interacción con los servicios de AWS, principalmente usando AWS CLI.
+- Explorar la clasificación de los grupos de servicios en AWS.
+- Mostar las ventajas de consumir servicios en la nube.
 - Evitar sorpresas desagradables en la factura de fin de mes, si se tiene una sorpresa brindar las herramientas necesarias para detectar el problema.
 
 ## Requisitos

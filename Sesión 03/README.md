@@ -3,7 +3,7 @@
 
 ## Objetivo
 
-+ Reconocer las opciones que ofrece AWS para la gestión de redes y cómo interactúan con otros servicios.
++ Reconocer las opciones que ofrece AWS para la gestión de redes y cómo interactúan con otros servicios, procipalmente se aprenderá a configurar un DNS para mitigar ataques de denegación de servicio y balancear cargas para tolerancia a fallas.
 
 ## Requisitos
 
