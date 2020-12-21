@@ -2,8 +2,8 @@
 
 ## Objetivo
 
-- "Identificar las herramientas para desarrolladores de AWS.
-Aplicar las mejores prácticas en el entorno AWS de manera consistente a lo largo de los servicios."
+- Identificar las herramientas para desarrolladores de AWS.
+- Aplicar las mejores prácticas en el entorno AWS de manera consistente a lo largo de los servicios.
 
 ## Requisitos
 
