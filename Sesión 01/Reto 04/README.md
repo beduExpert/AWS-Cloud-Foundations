@@ -71,6 +71,6 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 
 De ahora en adelante todos los cambios que tengan que ver con DNS del dominio deberán ser gestionados en la consola de **Route53**.
 
-11. Después de 10 minutos (aunque pueden pasar hasta 24 horas) se puede verificar con Whois que el dominio ya es manejado por **AWS**.
+11. Después de 10 minutos (aunque pueden pasar hasta 24 horas) se puede verificar con [Whois](http://whois.net/) que el dominio ya es manejado por **AWS**.
 
 <img src="img/12.png"></img>
