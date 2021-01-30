@@ -49,11 +49,7 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 >
 >**Dejar en blanco** los campos por el momento y abrir una nueva pestaña del navegador para ingresar a la consola de AWS.
 
-
-
 6. Ya en la consola, buscar el servicio **Route53** y acceder a él.
-
-<img src="img/6.png"></img>
 
 7. Dar click en **Crear una zona alojada**
 
