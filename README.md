@@ -22,6 +22,23 @@ No es necesario, pero sí recomendable tener **conocimientos previos de programa
 + TCP/IP
 + HTTP
 
+## Temario
+- [`Sesión 01:` Fundamentos de Cómputo en la Nube](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2001)
+
+- [`Sesión 02:` Infraestructura y servicios en la nube](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2002)
+
+- [`Sesión 03:` Contenido y redes en AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2003)
+
+- [`Sesión 04:` Seguridad y compliance](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2004)
+
+- [`Sesión 05:` Almacenamiento con AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2005)
+
+- [`Sesión 06:` Cómputo en la nube con AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2006)
+
+- [`Sesión 07:` Arquitectura AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2007)
+
+- [`Sesión 08:` Integraciones y gobernanza](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2008)
+
 ## Proyecto
 
 El proyecto contempla el uso de varios servicios de AWS con el fin de adquirir la visibilidad como todos ellos operan en conjunto.
@@ -35,7 +52,6 @@ En general consistirá en las siguientes partes:
 - Se tendrá un servicio SMS listo para el envío de mensajes al tener un nuevo cliente.
 
 Se recomienda encarecidamente que todo el proyecto sea generado en una misma unidad regional, en este curso se estará usando la región `us-east-1`.
-
 
 
 Toda esta infraestructura debe tener un certificado de seguridad para operar, será usado AWS Certificate Manager para generarlo, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto. 
