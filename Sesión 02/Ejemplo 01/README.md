@@ -12,7 +12,7 @@
 
 ### Instala los siguientes recursos de AWS dependiendo de tu Sistema Operativo
 
-* [Windows](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-en-windows)
+* [Windows](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2002/Ejemplo%2001#instalaci%C3%B3n-en-windows)
 * [Linux](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-linux)
 * [Mac OS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/2.-Infraestructura%20y%20servicios%20en%20la%20nube/Ejemplo%2001#instalación-en-mac)
 
