@@ -6,7 +6,7 @@ Este curso sirve como preparación para la certificación [AWS Cloud Practitione
 
 ## :dart: Objetivo
 
-El curso sirve como una introducción a los principales conceptos del cómputo en la nube desde un enfoque tanto de gestión y negocio como práctico. Con los conocimientos adquiridos el podrás armar casos de negocios que consideren los beneficios de diferentes tipos y niveles de servicio que ofrece **AWS** frente a otras alternativas (**Google**, **IBM**, **Microsoft**, etc.).
+Fungir como una introducción a los principales conceptos del cómputo en la nube desde un enfoque tanto de gestión y negocio como práctico. Con los conocimientos adquiridos el podrás armar casos de negocios que consideren los beneficios de diferentes tipos y niveles de servicio que ofrece **AWS** frente a otras alternativas (**Google**, **IBM**, **Microsoft**, etc.).
 
 Entenderás los **economics** y herramientas que te permitirán **optimizar los costos** asociados servicios e infraestructura en la plataforma de AWS que se ajusten a las necesidades de cada proyecto o negocio.
 
