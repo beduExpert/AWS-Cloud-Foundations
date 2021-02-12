@@ -59,7 +59,7 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 
 <img src="img/8.png"></img>
 
-9.  Se generará la zona del dominio, comparemos los valores del registro de tipo **NS** a la pantalla del [paso 5](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/1.-Fundamentos%20de%20Cómputo%20en%20la%20Nube/Reto%2004#5-ahora-selecciona-use-custom-nameservers). 
+9.  Se generará la zona del dominio, comparemos los valores del registro de tipo **NS** a la pantalla del [paso 5](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2001/Reto%2004#5-ahora-selecciona-use-custom-nameservers). 
 
 <img src="img/9.png"></img>
 
