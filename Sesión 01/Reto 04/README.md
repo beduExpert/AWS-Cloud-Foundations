@@ -49,11 +49,7 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 >
 >**Dejar en blanco** los campos por el momento y abrir una nueva pestaña del navegador para ingresar a la consola de AWS.
 
-
-
 6. Ya en la consola, buscar el servicio **Route53** y acceder a él.
-
-<img src="img/6.png"></img>
 
 7. Dar click en **Crear una zona alojada**
 
@@ -63,7 +59,7 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 
 <img src="img/8.png"></img>
 
-9.  Se generará la zona del dominio, comparemos los valores del registro de tipo **NS** a la pantalla del [paso 5](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/1.-Fundamentos%20de%20Cómputo%20en%20la%20Nube/Reto%2004#5-ahora-selecciona-use-custom-nameservers). 
+9.  Se generará la zona del dominio, comparemos los valores del registro de tipo **NS** a la pantalla del [paso 5](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesi%C3%B3n%2001/Reto%2004#5-ahora-selecciona-use-custom-nameservers). 
 
 <img src="img/9.png"></img>
 
@@ -75,6 +71,6 @@ Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no 
 
 De ahora en adelante todos los cambios que tengan que ver con DNS del dominio deberán ser gestionados en la consola de **Route53**.
 
-11. Después de 10 minutos (aunque pueden pasar hasta 24 horas) se puede verificar con Whois que el dominio ya es manejado por **AWS**.
+11. Después de 10 minutos (aunque pueden pasar hasta 24 horas) se puede verificar con [Whois](http://whois.net/) que el dominio ya es manejado por **AWS**.
 
 <img src="img/12.png"></img>
