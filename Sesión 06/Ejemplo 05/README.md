@@ -13,7 +13,7 @@
 - Certificado de seguridad en Amazon Certificade Manager.
 - [Postman](https://www.postman.com/product/rest-client/) instalado para verificar el funcionamiento de la API.
 
-Ya corroborado el funcionamiento de la API, se procede con la [descarga del código fuente HTML](assets/contact_form.zip) que estará de cara al usuario final.
+Ya corroborado el funcionamiento de la API, se procede con la [descarga del código fuente HTML](../../assets/contact_form.zip) que estará de cara al usuario final.
 
 1. Con el código fuente descargado, descomprimir el zip, abrir el archivo `index.html` en un editor como Notepad, Vim, VSCode, SublimeText, Atom, Notepad++ o cualquier otro.
 2. Ir a la siguiente sección de código para establecer la URL de la API, misma que fue usada en Postman.
