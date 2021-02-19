@@ -51,8 +51,8 @@ Reemplazar la ruta de la imagen en el comando, aunque si se debe anteponer el pr
 1. Para el análisis facial, descargar la imagen de una persona con el rostro descubierto. Se puede usar la [página](https://generated.photos).
 
 Para este ejemplo se usará el rostro:
-![ej2-old-man-01.png](img/ej2-old-man-01.png)
 
+![ej2-old-man-01.png](img/ej2-old-man-01.png)
 
 2. Ejecutar el comando
 ```bash
