@@ -34,7 +34,7 @@ Donde la ruta de la imagen se debe especificar de acuerdo al sistema operativo. 
 -------------------------------------------------------------------
 
 1. Descargar una imagen de un auto con un número de matrícula visible, para este ejemplo se puede usar: 
- ![ej2-detect-matricula-image-01.png](ej2-detect-matricula-image-01.png)
+ ![ej2-detect-matricula-image-01.png](img/ej2-detect-matricula-image-01.png)
 
 
 2. Ejecutar el comando 
@@ -43,7 +43,7 @@ Donde la ruta de la imagen se debe especificar de acuerdo al sistema operativo. 
 aws rekognition detect-text --image-bytes  fileb://D:\downloads\auto-placas.PNG
 ```
 
-Reemplazar la ruta de la imagen en el comando, aunque si se debe anteponer el prefijo "fileb://" a la ruta.
+Reemplazar la ruta de la imagen en el comando, aunque si se debe anteponer el prefijo `fileb://` a la ruta.
 
 ![ej2-detect-text-done-01.png](img/ej2-detect-text-done-01.png)
 
