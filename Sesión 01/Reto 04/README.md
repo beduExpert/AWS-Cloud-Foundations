@@ -12,6 +12,12 @@
 
 Vamos a necesitar un dominio del cual seas dueño para el proyecto final, si no quieres gastar dinero [Freenom](https://www.freenom.com/es/index.html?lang=es) es una buena opción gratuita, si quieres optar por una opción de paga puedes acercarte a [Namecheap](https://www.namecheap.com/), es posible comprar un dominio dentro de Amazon Web Services pero nos quitará la diversión de configurar el **DNS** por nosotros mismos  , eso sin contar que muchos de los clientes cuentan con dominios comprados fuera de Amazon. 
 
+> **💡 Nota**
+>
+>Algunas otras opciones para encontrar dominios `gratuitos` son:
+>   * https://www.biz.nf/free-domain.php
+>   * https://codotvu.co/
+
 > **❗Cuidado**
 >
 >Se recomienda encarecidamente que no se usen dominios ligados a algún servicio en producción ya que en la manipulación podríamos afectar el sitio productivo.
