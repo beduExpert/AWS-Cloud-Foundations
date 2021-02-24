@@ -231,10 +231,10 @@ clientes_prod_db_01=> \dt
 * lanzamos la instrucción `select * from leads_leads;` para ver el contenido de la tabla
 ```sh
 clientes_prod_db_01=>  select * from leads_leads;
- id |      name      |          email           |        subject         |       message       
-----+----------------+--------------------------+------------------------+---------------------
-  1 | Braulio        | brauliodev@gmail.com     | Testing                | AWS with bedu <3
-  2 | Betito         | bedu@gmail.com           | Testing xD             | Request from CDMX
-  3 | Ricardo Torres | rictor@cuhrt.com         | prueba                 | Hola hacia Django
+ id |      name      |          email        |    subject    |       message       
+----+----------------+-----------------------+---------------+---------------------
+  1 | Braulio        | brauliodev@gmail.com  | Testing       | AWS with bedu <3
+  2 | Betito         | bedu@gmail.co         | Testing xD    | Request from CDMX
+  3 | Ricardo Torres | rictor@cuhrt.com      | prueba        | Hola hacia Django
 (3 rows)
 ```
