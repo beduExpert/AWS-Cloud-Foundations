@@ -81,7 +81,7 @@ aws --version
 
 Ya instalado AWS CLI, es necesario configurarlo.
 
-1. Teniendo a la mano el archivo `.csv` generado en el [reto 06](../../Sesión%2001/Reto%2006/README.md) de la `Sesión 01`, ejecutar el comando:
+1. Teniendo a la mano el archivo `.csv` generado en el [Ejemplo 01](../../Sesión%2001/Ejemplo%2001/README.md) de la `Sesión 01`, ejecutar el comando:
 ```bash
 aws configure
 ```
