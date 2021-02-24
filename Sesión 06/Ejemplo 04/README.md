@@ -80,7 +80,7 @@ docker run -p 80:8000 \
 ```
 
 docker run: Indica que se deberá ejecutar un comando de docker
-En las variables de entorno DB_HOST, DB_NAME, DB_USER, DB_PASSWORD se deberán establecer los parámetros propios para la conexión con la base de datos.
+En las variables de entorno `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` se deberán establecer los parámetros propios para la conexión con la base de datos.
 
 ![pw-run-docker-instance-01.png](../img/pw-run-docker-instance-01.png)
 
@@ -96,6 +96,12 @@ Pasados algunos minutos se comienza a observar tráfico hacia la instancia EC2 y
 
 ![pw-health-check-load-balancer.png](../img/pw-health-check-load-balancer.png)
 
+Ingresa a la `ip` de cada servidor agregando `/api/v1` para corroborar que el docker está corriendo y ha expuesto la `API` correctamente
+
+`http://18.234.162.170/api/v1/`
+
+<img src="img/1-ec2-instances.png"></img>
+<img src="img/2-django.png"></img>
 
 6. Ahora como paso siguiente se se debe configurar el balanceador de carga con un subdominio, ya que las peticiones web no llegarán directamente a las instancias de EC2 y a los contenedores que estan dentro de ellas, quien recibe el tráfico HTTP y HTTPS será el balanceador de carga, y para poder llegar a él se debe configurar un subdominio, para lo cual se debe ir al servicio Route 53.
 
