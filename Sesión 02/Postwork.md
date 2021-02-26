@@ -42,6 +42,7 @@
 <img src="img/configurar-registro.png">
 
 8. Generar el subdominio del registro, en este caso **app**:
+
   **a.** Nombre del registro debe coincidir con el nombre del bucket-
 
   **b.** Especificar que el registro debe resolver un bucket de S3. 
