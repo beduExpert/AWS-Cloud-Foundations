@@ -1,16 +1,18 @@
 # Postwork
 
+# 💻 Proyecto
+
 ## 1. Objetivo 
 - Configurar un bucket S3 con un sitio estático servido por un nombre de dominio propio.
 
 <img src="img/pw-hacia-donde-vamos-01.png"/>
 
-
 ## 2. Requisitos 
-- AWS CLI instalado y funcionando. 
-- Acceso a AWS Console.
+- `AWS CLI` instalado y funcionando. 
+- Acceso a `AWS Console`.
 
 ## 3. Desarrollo 
+
 1. Generar un bucket con el nombre del subdominio donde será servido el sitio estático, para el ejemplo será **app.edupractice.tk**
 
 <img src="img/make_bucket.png">
@@ -39,7 +41,16 @@
 
 <img src="img/configurar-registro.png">
 
-8. Generar el subdominio del registro, en este caso "app" el nombre del registro debe coincidir con el nombre del bucket (a), especificar que el registro debe resolver un bucket de S3 (b) , notar que es una funcionalidad no estándard de DNS, es una funcionalidad añadida por tener el DNS configurado con AWS. Especificar la Zona donde trabaja el bucket  (c),  us-east-1 para el ejemplo. Seleccionar el nombre del bucket destinado a servir como servidor web estático (d), deshabilitar la evaluación de estado del destino (e).
+8. Generar el subdominio del registro, en este caso **app**:
+  **a.** Nombre del registro debe coincidir con el nombre del bucket-
+
+  **b.** Especificar que el registro debe resolver un bucket de S3. 
+
+  **c.** Notar que es una funcionalidad no estándard de DNS, es una funcionalidad añadida por tener el DNS configurado con AWS. 
+
+  **d.** Especificar la Zona donde trabaja el bucket ,  `us-east-1` para el ejemplo. Seleccionar el nombre del bucket destinado a servir como servidor web estático.
+
+  **e.** Deshabilitar la evaluación de estado del destino.
 
 <img src="img/configurar-registro.png">
 
@@ -51,7 +62,7 @@
 
 <img src="img/verificar-generacion-registro.png">
 
-11. Pasados unos minutos al hacer ping se verá que el subdominio resuelve a una dirección IP.
+11. Pasados unos minutos al hacer **ping** se verá que el subdominio resuelve a una dirección IP.
 
 <img src="img/ping.png">
 
