@@ -1,4 +1,4 @@
-# Reto 06 - Creación de un perfil IAM
+# Ejemplo 01 - Creación de un perfil IAM
 
 ## Objetivo
 
