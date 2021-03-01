@@ -103,6 +103,19 @@ Ingresa a la `ip` de cada servidor agregando `/api/v1` para corroborar que el do
 <img src="img/1-ec2-instances.png"></img>
 <img src="img/2-django.png"></img>
 
+> 💡 Algunos comandos básicos en docker
+> 
+
+```sh
+docker ps -a  # listar todos los contenedores
+docker start  # iniciar uno o más contenedores detenidos
+docker attach # vincularse a la consola de un contenedor en ejecución
+docker rm     # eliminar uno o más contenedores
+docker images # listar imágenes
+docker rmi    # eliminar una o más imágenes
+```
+> 💡 Puedes encontrar la guía completa en [docker docs](https://docs.docker.com/engine/reference/commandline/docker/)
+
 6. Ahora como paso siguiente se se debe configurar el balanceador de carga con un subdominio, ya que las peticiones web no llegarán directamente a las instancias de EC2 y a los contenedores que estan dentro de ellas, quien recibe el tráfico HTTP y HTTPS será el balanceador de carga, y para poder llegar a él se debe configurar un subdominio, para lo cual se debe ir al servicio Route 53.
 
 ![pw-ingress-route-53.png](../img/pw-ingress-route-53.png)
