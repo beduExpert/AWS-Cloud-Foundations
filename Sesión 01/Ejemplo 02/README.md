@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-* Diagramar la solución que se implementará durante el curso
+* Enseñar a diagramar arquitecturas en AWS
 
 ## Desarrollo
 
