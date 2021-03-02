@@ -81,7 +81,7 @@ aws --version
 
 Ya instalado AWS CLI, es necesario configurarlo.
 
-1. Ejecutar el comando:
+1. Teniendo a la mano el archivo `.csv` generado en el [Ejemplo 01](../../Sesión%2001/Ejemplo%2001/README.md) de la `Sesión 01`, ejecutar el comando:
 ```bash
 aws configure
 ```
@@ -106,27 +106,3 @@ aws iam help
 El punto clave es el argumento `help`
 
 <img src="img/AWScli-iam-subcommands.png"></img>
-
-
-**¿De dónde salen las claves Access Key ID y Secret Access Key?**
-
-1. Ir a la [consola](https://console.aws.amazon.com/iam/)
-2. Seleccionar Usuarios, después "Añadir usuario(s)" 
-
-<img src="img/iam-new-user-for-cli.png"></img>
-
-3. Especificar el nombre del usuario y seleccionar "Acceso mediante programación"
-
-<img src="img/iam-cli-user-02.png"></img>
-
-4. Seleccionar la política (permisos) que aplicará al usuario.
- 
-<img src="img/iam-aws-cli-policy.png"><img>
-
-5. Siempre es recomendable agregar TAGS (etiquetas de identificación) cuando sea posible, ayudará para la administración.
-
-<img src="img/awscli-iam-tags.png"><img>
-
-6. Generado el usuario ya se pueden obtener las claves de acceso, la clave de acceso secreta solo se puede ver si se da click en "mostrar", esta es la única vez que aparecerá la clave de acceso secreta, es necesario guardarla, de preferencia en un gestor de contraseñas.
-
-<img src="img/Awscli-claves-acceso.png"><img>

@@ -71,11 +71,16 @@ Regresando a la linea de comandos (si deja de responder solo refrescar pantalla 
 
 4. Para seguir con el ejemplo, se deberá ejecutar en la linea de comando el siguiente comando
 ```ssh
-docker run -p 80:8000 -e DB_HOST=db-app-01-prod-01.cj0gk32kblft.us-east-1.rds.amazonaws.com -e DB_NAME=clientes_prod_db_01 -e DB_USER=postgres -e DB_PASSWORD=<el-password-de-la-base> -it bay007/edu
+docker run -p 80:8000 \
+-e DB_HOST=<el-host-de-la-base> \
+-e DB_NAME=clientes_prod_db_01 \
+-e DB_USER=postgres \
+-e DB_PASSWORD=<el-password-de-la-base> \
+-it bay007/edu
 ```
 
 docker run: Indica que se deberá ejecutar un comando de docker
-En las variables de entorno DB_HOST, DB_NAME, DB_USER, DB_PASSWORD se deberán establecer los parámetros propios para la conexión con la base de datos.
+En las variables de entorno `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` se deberán establecer los parámetros propios para la conexión con la base de datos.
 
 ![pw-run-docker-instance-01.png](../img/pw-run-docker-instance-01.png)
 
@@ -91,6 +96,25 @@ Pasados algunos minutos se comienza a observar tráfico hacia la instancia EC2 y
 
 ![pw-health-check-load-balancer.png](../img/pw-health-check-load-balancer.png)
 
+Ingresa a la `ip` de cada servidor agregando `/api/v1` para corroborar que el docker está corriendo y ha expuesto la `API` correctamente
+
+`http://18.234.162.170/api/v1/`
+
+<img src="img/1-ec2-instances.png"></img>
+<img src="img/2-django.png"></img>
+
+> 💡 Algunos comandos básicos en docker
+> 
+
+```sh
+docker ps -a  # listar todos los contenedores
+docker start  # iniciar uno o más contenedores detenidos
+docker attach # vincularse a la consola de un contenedor en ejecución
+docker rm     # eliminar uno o más contenedores
+docker images # listar imágenes
+docker rmi    # eliminar una o más imágenes
+```
+> 💡 Puedes encontrar la guía completa en [docker docs](https://docs.docker.com/engine/reference/commandline/docker/)
 
 6. Ahora como paso siguiente se se debe configurar el balanceador de carga con un subdominio, ya que las peticiones web no llegarán directamente a las instancias de EC2 y a los contenedores que estan dentro de ellas, quien recibe el tráfico HTTP y HTTPS será el balanceador de carga, y para poder llegar a él se debe configurar un subdominio, para lo cual se debe ir al servicio Route 53.
 
@@ -136,7 +160,19 @@ Segundos después el registro es creado
 
 ![pw-ping-done.png](../img/pw-ping-done.png)
 
-15. Con Postman se comenzará la prueba de funcionamiento de la API. 
+15. Lanzar una llamada `POST` para probar el funcionamiento de la API.
+
+`curl`)
+
+```sh
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{"name": "Ethien Salinas", "email":"ethien.salinas@gmail.com", "subject": "AWS Certified Cloud Practitioner", "message": "¿Cuál es el factor más importante para convertirte en un AWS Certified Cloud Practitioner?"}' \
+https://api.edupractice.tk/api/v1/leads/
+```
+
+`postman`)
+
 a) Seleccionar el protocolo POST.
 b) Establecer la la URL a la que se hará el request, conformada por `https://` más el subdominio recién configurado en Route 53 más el path `/api/v1/leads/` (poner atención en la diagonal al final).
 c) Establecer la petición como `raw`.
@@ -161,3 +197,63 @@ Hecha la petición se ve el código de estatus 201 lo que indica que el registro
 Viendo la consola se puede ver la petición recién hecha.
 
 ![pw-request-done-on-cli.png](../img/pw-request-done-on-cli.png)
+
+16. Corroborar registro en BD.
+> 🤔 **corroborar a través de un cliente de BD**
+>
+> ¿qué crees que suceda si intentas conectarte a través de un cliente de BD directamente?
+
+* estando dentro del servidor ec2, conectate a la BD con los valores de HOST y password adecuados
+```sh
+[ec2-user@ip-10-0-1-226 ~]$ psql -U postgres -h db-app-01-prod-01.c6iw1d4p854x.us-east-1.rds.amazonaws.com
+Password for user postgres: 
+psql (9.2.24, server 12.5)
+WARNING: psql version 9.2, server version 12.0.
+         Some psql features might not work.
+SSL connection (cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256)
+Type "help" for help.
+
+postgres=> 
+```
+
+* nos conectamos a la BD `clientes_prod_db_01` con el comando `\c clientes_prod_db_01`
+```sh
+postgres=> \c clientes_prod_db_01
+psql (9.2.24, server 12.5)
+WARNING: psql version 9.2, server version 12.0.
+         Some psql features might not work.
+SSL connection (cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256)
+You are now connected to database "clientes_prod_db_01" as user "postgres".
+clientes_prod_db_01=> 
+```
+
+* mostramos las tablas de la BD con `\dt` y vemos que `leads_leads` existe
+```sh
+clientes_prod_db_01=> \dt
+                   List of relations
+ Schema |            Name            | Type  |  Owner   
+--------+----------------------------+-------+----------
+ public | auth_group                 | table | postgres
+ public | auth_group_permissions     | table | postgres
+ public | auth_permission            | table | postgres
+ public | auth_user                  | table | postgres
+ public | auth_user_groups           | table | postgres
+ public | auth_user_user_permissions | table | postgres
+ public | django_admin_log           | table | postgres
+ public | django_content_type        | table | postgres
+ public | django_migrations          | table | postgres
+ public | django_session             | table | postgres
+ public | leads_leads                | table | postgres
+(11 rows)
+```
+
+* lanzamos la instrucción `select * from leads_leads;` para ver el contenido de la tabla
+```sh
+clientes_prod_db_01=>  select * from leads_leads;
+ id |      name      |          email        |    subject    |       message       
+----+----------------+-----------------------+---------------+---------------------
+  1 | Braulio        | brauliodev@gmail.com  | Testing       | AWS with bedu <3
+  2 | Betito         | bedu@gmail.co         | Testing xD    | Request from CDMX
+  3 | Ricardo Torres | rictor@cuhrt.com      | prueba        | Hola hacia Django
+(3 rows)
+```

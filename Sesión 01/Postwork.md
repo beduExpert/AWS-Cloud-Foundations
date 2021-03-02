@@ -2,24 +2,32 @@
 
 # 1. Objetivo 🎯
 
-- Expandir los conceptos vistos en la sesión de trabajo
+- Comprender de que se va a tratar nuestro proyecto que vamos a realizar en las siguiente sesiones.
 
-## 2. Requisitos 📋
 
-* Navegador web e Internet
+>💡 **Nota:**
+>
+>Para identificar que estamos trabajando con nuestro proyecto,encontrarás el siguiente emoji 💻 con la leyenda *Proyecto.*
 
-# 3. Desarrollo 📑
+# 💻 Proyecto
 
-### Para el planteamiento del proyecto conviene conocer:
+El proyecto contempla el uso de varios servicios de AWS con el fin de adquirir la visibilidad como todos ellos operan en conjunto.
+Se simulará un formulario de contacto de clientes o captador de clientes (leads), al momento de que el usuario final llene los campos y de click en el botón de envío se enviarán los datos a un balanceador de carga, el balanceador de carga con su certificado SSL reenviará los datos a alguna de las intancias que estén ejecutando el código que se encargará de tomar la información y guardarla en base de datos además de despachar la información necesaria para dar aviso a un número celular en cuanto un nuevo usuario deje sus datos de contacto.
 
-- [Zonas desmilitarizadas](es.wikipedia.org/wiki/Zona_desmilitarizada_(informática))
+En general consistirá en las siguientes partes:
 
-- [Lista de puertos más usados](https://docs.opencloud.cl/tutoriales/servidores/lista-de-puertos-mas-comunmente-utilizados.html)
+- Una interfaz hosteada en **S3** con **HTML**, **CCS** y **Javascript**, esta será la parte de cara al usuario final.
+- Un balanceador de carga con su **certificado SSL** para que la información viaje segura.
+- Un par de **instancias EC2** de AWS, el código se ejecutará en contenedores Docker.
+- Se tendrá un **servicio SMS** listo para el envío de mensajes al tener un nuevo cliente.
 
-- [¿Cómo funciona el protocolo DNS?](https://www.verisign.com/es_LA/website-presence/online/how-dns-works/index.xhtml)
+Se recomienda encarecidamente que todo el proyecto sea generado en una misma unidad regional, en este curso se estará usando la región `us-east-1`.
 
-- [Balanceadores de carga](https://www.nginx.com/resources/glossary/load-balancing/)
+Toda esta infraestructura debe tener un **certificado de seguridad** para operar, será usado AWS Certificate Manager para generarlo, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto. 
 
-- [¿Cómo medir los tiempos para los backups?](https://www.itsafer.com/que-es-el-rto-y-el-rpo-en-un-plan-de-recuperacion-de-desastres-drp/)
+<img src="../assets/arquitectura-Infra.jpg">
+
+
+En las siguientes sesiones empezaremos a ensuciarnos las manos con nuestro proyecto.
 
 

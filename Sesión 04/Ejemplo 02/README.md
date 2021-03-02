@@ -31,9 +31,9 @@ aws --region us-east-1 s3api put-bucket-encryption --bucket facturas-personales 
 
 <img src="img/ej2-awsconsole-cifrado.png"></img>
 
-4. Al ver el detalle de los archivos se puede ver que los archivos existentes aun no son cifrados.
-![]()
-<img src="img/ej2-files-ciphered.png"></img>
+4. Al ver el detalle de los archivos se puede ver que los archivos existentes aún no son cifrados.
+
+<img src="img/ej2-file-default-encryption.png"></img>
 
 5. Para cifrar los archivos se ejecuta el comando
 

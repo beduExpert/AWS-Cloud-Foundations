@@ -27,3 +27,5 @@ No es óptimo en costos  y tiempo seguir ese esquema, al descargar los datos a l
 
 Una vez copiados los archivos:
 **¿Con qué comando se puede eliminar el bucket de origen?**
+
+### Es momento de seguir con [**nuestro proyecto**.](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/pilot-changes-and-fixes/Sesi%C3%B3n%2002/Postwork.md)
