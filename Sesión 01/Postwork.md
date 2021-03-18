@@ -2,32 +2,84 @@
 
 # 1. Objetivo 🎯
 
-- Comprender de que se va a tratar nuestro proyecto que vamos a realizar en las siguiente sesiones.
+- Complementar los grupos de permisos que necesitaremos a lo largo del curso.
 
 
 >💡 **Nota:**
 >
->Para identificar que estamos trabajando con nuestro proyecto,encontrarás el siguiente emoji 💻 con la leyenda *Proyecto.*
+>Puedes consultar el [Ejemplo 2](./Ejemplo%2002/README.md) para recordar el procedimiento de creación de un grupo
 
-# 💻 Proyecto
+1. Ingresa a IAM/Groups/Create New Group
+2. Da el nombre `admin` nombre al grupo
+<img src="img/1.png"></img>
 
-El proyecto contempla el uso de varios servicios de AWS con el fin de adquirir la visibilidad como todos ellos operan en conjunto.
-Se simulará un formulario de contacto de clientes o captador de clientes (leads), al momento de que el usuario final llene los campos y de click en el botón de envío se enviarán los datos a un balanceador de carga, el balanceador de carga con su certificado SSL reenviará los datos a alguna de las intancias que estén ejecutando el código que se encargará de tomar la información y guardarla en base de datos además de despachar la información necesaria para dar aviso a un número celular en cuanto un nuevo usuario deje sus datos de contacto.
+3. Busca y selecciona los siguientes `policies`
+* IAMFullAccess
+* Billing
+* AmazonAPIGatewayInvokeFullAccess
+* AWSConfigRole
+* AWSConfigUserAccess
+* AmazonAPIGatewayAdministrator
+* AWSKeyManagementServicePowerUser
+<img src="img/2.png"></img>
 
-En general consistirá en las siguientes partes:
+4. Teniendo todas seleccionadas, da click en `Next Step`
 
-- Una interfaz hosteada en **S3** con **HTML**, **CCS** y **Javascript**, esta será la parte de cara al usuario final.
-- Un balanceador de carga con su **certificado SSL** para que la información viaje segura.
-- Un par de **instancias EC2** de AWS, el código se ejecutará en contenedores Docker.
-- Se tendrá un **servicio SMS** listo para el envío de mensajes al tener un nuevo cliente.
+5. Verifica que todas las `policies` se encuentren incluidas y da click en `Create group`
+<img src="img/3.png"></img>
 
-Se recomienda encarecidamente que todo el proyecto sea generado en una misma unidad regional, en este curso se estará usando la región `us-east-1`.
+6. Entra al grupo recien creado y da click en `Add Users to Group`
+<img src="img/4.png"></img>
 
-Toda esta infraestructura debe tener un **certificado de seguridad** para operar, será usado AWS Certificate Manager para generarlo, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto. 
+7. Busca a tu usuario IAM y después de seleccionarlo, da click en `Add Users`
+<img src="img/5.png"></img>
 
-<img src="../assets/arquitectura-Infra.jpg">
+8. Repite los pasos anteriores para crear o completar los siguientes grupos
 
+`admin`
+* AmazonEC2FullAccess
+* ElasticLoadBalancingFullAccess
+* AmazonS3FullAccess
+* CloudFrontFullAccess
+* AmazonVPCFullAccess
+* AmazonMacieFullAccess
+* AmazonESFullAccess
+* AmazonSNSFullAccess
+* AmazonRoute53FullAccess
+* AWSCertificateManagerFullAccess
 
-En las siguientes sesiones empezaremos a ensuciarnos las manos con nuestro proyecto.
+`cloud`
+* AmazonEC2FullAccess
+* ElasticLoadBalancingFullAccess
+* AmazonS3FullAccess
+* CloudFrontFullAccess
+* AmazonVPCFullAccess
+* AmazonMacieFullAccess
+* AmazonESFullAccess
+* AmazonSNSFullAccess
+* AmazonRoute53FullAccess
+* AWSCertificateManagerFullAccess
 
+`data`
+* ComprehendFullAccess
+* AmazonRekognitionFullAccess
+* AmazonRekognitionServiceRole
+* AWSGlueConsoleFullAccess
+* AmazonRekognitionCustomLabelsFullAccess
 
+`databases`
+* AmazonRDSFullAccess
+* AmazonDynamoDBFullAccess
+* AmazonKeyspacesFullAccess
+
+`devops`
+* AWSCodeCommitFullAccess
+* AmazonEC2ContainerRegistryFullAccess
+* AmazonECS_FullAccess
+* AWSCodePipelineFullAccess
+* AWSCodeBuildAdminAccess
+* AWSCloudFormationFullAccess
+* AmazonElasticContainerRegistryPublicFullAccess
+* AWSLambda_FullAccess
+
+9. Agrega tu usuario a cada uno de los grupos creados
