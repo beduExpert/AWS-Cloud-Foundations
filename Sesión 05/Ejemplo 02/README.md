@@ -1,4 +1,4 @@
-# Ejemplo 01: RDS en subnet privada
+# Ejemplo 02: RDS en subnet privada
 
 ## 1. Objetivo
 - Generar una instancia de base de datos administrada para el guardado de datos de la aplicación.
