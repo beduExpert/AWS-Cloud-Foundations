@@ -14,14 +14,8 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Funcionalidad de un web server](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2004/Ejemplo%2001)
-
-- [Ejemplo  02: Cifrado de datos en S3](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2004/Ejemplo%2002)
-
-- [Ejemplo  03: Buscar información sensible en un bucket S3](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2004/Ejemplo%2003)
-
-- [Reto  01: Administración de políticas y usuarios](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2004/Reto%2001)
-
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2004/Postwork.md)
-
-
+- [Ejemplo 01: Acceso a S3 con usuario IAM](./Ejemplo%2001/README.md)
+- [Ejemplo 02: Cifrado de datos en un S3](./Ejemplo%2002/README.md)
+    - [Reto 01: Búsqueda de información sencible con Amazon Macie](./Reto%2001/README.md)
+- [Ejemplo 03: Certificado SSL](./Ejemplo%2003/README.md)
+- [Postwork: Creación de política insertada en IAM](./Postwork.md)

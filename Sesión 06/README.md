@@ -20,14 +20,10 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Explorar el modelo de computación en la nube Serverless](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2006/Ejemplo%2001)
-
-- [Reto 01: Serverless](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2006/Reto%2001)
-
-- [Ejemplo 02: Conocer el bastión básico para la ejecución de cómputo en la nube con EC2](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2006/Ejemplo%2002)
-
-- [Ejemplo 03: Conocer la configuracion para usar un balanceador de carga](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2006/Ejemplo%2003)
-
-- [Ejemplo 04: Configurar las redes para conexión a base de datos](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2006/Ejemplo%2004)
-
-- [Ejemplo 05: Conjuntar múltiples servicios operando para dar vida a un aplicativo completo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2006/Ejemplo%2005)
+- [Ejemplo 01: AWS SAM CLI](./Ejemplo%2001/README.md)
+    - [Reto 01: Modificar Lambda desplegada](./Reto%2001/README.md)
+- [Ejemplo 02: EC2 (bastión)](./Ejemplo%2002/README.md)
+- [Ejemplo 03: Load Balancer](./Ejemplo%2003/README.md)
+- [Ejemplo 04: Docker en EC2 (API del proyecto)](./Ejemplo%2004/README.md)
+    - [Reto 02: Frontend para registro](./Reto%2002/README.md)
+- [Postwork: Elastic Beanstalk](./Postwork.md)
