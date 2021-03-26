@@ -1,4 +1,4 @@
-# Ejemplo 1: AWS Config
+# Ejemplo 1: SMS en registro
 
 ## 1. Objetivo 
 - Integración de servicios de Messaging, servicios para la comunicación entre servicios de AWS.

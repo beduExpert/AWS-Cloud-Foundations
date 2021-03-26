@@ -1,4 +1,4 @@
-# Postwork
+# Postwork: AWS Config
 
 ## 1. Objetivo 
 - Conocer todos los los servicios que están siendo ejecutados o consumidos en la cuenta de AWS.
