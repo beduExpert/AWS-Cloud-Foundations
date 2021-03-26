@@ -1,4 +1,4 @@
-# Ejemplo 1 
+# Ejemplo 1: AWS SAM CLI
 
 ## 1. Objetivo 
 - Explorar el modelo de computación en la nube Serverless.

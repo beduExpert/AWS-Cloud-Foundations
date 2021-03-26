@@ -1,4 +1,4 @@
-# Reto 1
+# Reto 1: Modificar lambda desplegada
 
 # 1. Objetivo 
 - Modificar la aplicación serverless explorando la facilidad del uso de serverless.

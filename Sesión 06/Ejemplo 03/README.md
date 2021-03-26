@@ -1,4 +1,4 @@
-# Ejemplo 3 
+# Ejemplo 3: Load Balancer
 
 ## 1. Objetivo 
 - Conocer la configuracion para usar un balanceador de carga.

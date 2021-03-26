@@ -1,4 +1,4 @@
-# Ejemplo 4 
+# Ejemplo 4: Docker en EC2 (API del proyecto)
 
 ## 1. Objetivo 
 - Configurar las redes para conexión a base de datos

@@ -1,10 +1,9 @@
-# Ejemplo 5
+# Reto 02: Frontend para registro
 
 ## 1. Objetivo 
 - Conjuntar múltiples servicios operando para dar vida a un aplicativo completo. 
 
 ![pw-a-donde-vamos-01.png](../img/pw-a-donde-vamos-01.png)
-
 
 ## 2. Requisitos 
 - Acceso a la consola de AWS (log)
@@ -45,7 +44,6 @@ Se guarda el archivo.
 Al hacer click en **Suscribirse** los datos serán guardados.
 
 ![pw-suscription-done.png](../img/pw-suscription-done.png)
-
 
 **🎉¡Felicidades!**, ha sido un trabajo arduo llegar hasta este punto, el estado del proyecto es el siguiente:
 

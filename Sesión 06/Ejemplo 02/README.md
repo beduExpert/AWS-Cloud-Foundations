@@ -1,4 +1,4 @@
-# Ejemplo 2 
+# Ejemplo 2: EC2 (bastión)
 
 ## 1. Objetivo 
 - Conocer el bastión básico para la ejecución de cómputo en la nube con EC2. 
