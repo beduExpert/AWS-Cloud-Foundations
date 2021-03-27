@@ -20,8 +20,8 @@
     - [Reto 01: Bolsas de trabajo relacionados a tecnologías de AWS](./Reto%2001/README.md)
     - [Reto  02: Abre tu primera cuenta en AWS](./Reto%2002/README.md)
 - [Ejemplo 02: Creación de un perfil IAM](./Ejemplo%2002/README.md)
-    - [Reto 03: Servicios ofrecidos de AWS.](./Reto%2003/README.md)
+    - [Reto 03: Creación grupos IAM](./Reto%2003/README.md)
     - [Reto 04: Adquirir un dominio](./Reto%2004/README.md)
-- [Postwork](./Postwork.md)
+- [Postwork: Servicios ofrecidos de AWS](./Postwork.md)
 
 
