@@ -1,12 +1,85 @@
-# Reto 03 - Servicios ofrecidos de AWS.
+## Reto 03: Creación grupos IAM 
 
-## Objetivo
+# 1. Objetivo 🎯
 
-* Familiarizarte con los servicios ofrecidos de AWS
+- Complementar los grupos de permisos que necesitaremos a lo largo del curso.
 
-## Desarrollo
 
-* Familiarízate navegando brevemente en la página de servicios ofrecidos de AWS.
-* Lista los servicios que de una u otra forma se te hacen conocidos en base a tu experiencia con otras tecnologías de acuerdo a la descripción que leas en ellos.
+>💡 **Nota:**
+>
+>Puedes consultar el [Ejemplo 2](./Ejemplo%2002/README.md) para recordar el procedimiento de creación de un grupo
 
-### [Artículo: Productos de la nube](https://aws.amazon.com/es/products/)
+1. Ingresa a IAM/Groups/Create New Group
+2. Da el nombre `admin` nombre al grupo
+<img src="img/1.png"></img>
+
+3. Busca y selecciona los siguientes `policies`
+* IAMFullAccess
+* Billing
+* AmazonAPIGatewayInvokeFullAccess
+* AWSConfigRole
+* AWSConfigUserAccess
+* AmazonAPIGatewayAdministrator
+* AWSKeyManagementServicePowerUser
+<img src="img/2.png"></img>
+
+4. Teniendo todas seleccionadas, da click en `Next Step`
+
+5. Verifica que todas las `policies` se encuentren incluidas y da click en `Create group`
+<img src="img/3.png"></img>
+
+6. Entra al grupo recien creado y da click en `Add Users to Group`
+<img src="img/4.png"></img>
+
+7. Busca a tu usuario IAM y después de seleccionarlo, da click en `Add Users`
+<img src="img/5.png"></img>
+
+8. Repite los pasos anteriores para crear o completar los siguientes grupos
+
+`admin`
+* AmazonEC2FullAccess
+* ElasticLoadBalancingFullAccess
+* AmazonS3FullAccess
+* CloudFrontFullAccess
+* AmazonVPCFullAccess
+* AmazonMacieFullAccess
+* AmazonESFullAccess
+* AmazonSNSFullAccess
+* AmazonRoute53FullAccess
+* AWSCertificateManagerFullAccess
+
+`cloud`
+* AmazonEC2FullAccess
+* ElasticLoadBalancingFullAccess
+* AmazonS3FullAccess
+* CloudFrontFullAccess
+* AmazonVPCFullAccess
+* AmazonMacieFullAccess
+* AmazonESFullAccess
+* AmazonSNSFullAccess
+* AmazonRoute53FullAccess
+* AWSCertificateManagerFullAccess
+
+`data`
+* ComprehendFullAccess
+* AmazonRekognitionFullAccess
+* AmazonRekognitionServiceRole
+* AWSGlueConsoleFullAccess
+* AmazonRekognitionCustomLabelsFullAccess
+
+`databases`
+* AmazonRDSFullAccess
+* AmazonDynamoDBFullAccess
+* AmazonKeyspacesFullAccess
+
+`devops`
+* AWSCodeCommitFullAccess
+* AmazonEC2ContainerRegistryFullAccess
+* AmazonECS_FullAccess
+* AWSCodePipelineFullAccess
+* AWSCodeBuildAdminAccess
+* AWSCloudFormationFullAccess
+* AmazonElasticContainerRegistryPublicFullAccess
+* AWSLambda_FullAccess
+
+9. Agrega tu usuario a cada uno de los grupos creados
