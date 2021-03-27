@@ -1,70 +1,77 @@
-# Ejemplo 1: AWS SAM CLI
+# Ejemplo 1: EC2 (bastión)
 
 ## 1. Objetivo 
-- Explorar el modelo de computación en la nube Serverless.
+- Conocer el bastión básico para la ejecución de cómputo en la nube con EC2. 
 
-## 2. Requisitos
-- AWS CLI instalado y configurado.
-- Tener instalado [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html), ayudará a hacer el despliegue sobre AWS Lambda y API Gateway más fácil al ser un framework, SAM significa Serverless Application Model.
-- [Git instalado](https://git-scm.com).
-- Conocimiento básico de la consola de comandos del sistema operativo que se use.
-- [NodeJS instalado](https://nodejs.org/en/download/).
+![pw-a-donde-vamos-01.png](../img/pw-a-donde-vamos-01.png)
 
+
+## 2. Requisitos 
+- Acceso a la consola de AWS (log)
+- Una base de datos RDS generada, tener contraseña, usuario, url (Endpoint ) de la instancia.
+- Tener grupos de seguridad de tráfico de entrada a puertos 22, 80, 443, 5432.
+- Certificado de seguridad en Amazon Certificade Manager.
 
 ## 3. Desarrollo 
 
-1. Verificar si se tiene instalado SAM CLI. Ejecutar el comando `sam`
+1. En el panel de EC2, dar click en "Lanzar la instancia".
 
-<img src="img/ej1-sam-check-if-installed.png"></img>
+![pw-launch-instance.png](../img/pw-launch-instance.png)
 
-2. Generar una carpeta especial como espacio de trabajo, al tener la carpeta navegar hasta ella y ejecutar `sam init`
+2. Seleccionar la siguiente AMI.
 
-<img src="img/ej1-sam-init.png"></img>
+![pw-select-ami.png](../img/pw-select-ami.png)
 
-3. Seleccionar un template Quick Start (a), seleccionar un lenguaje de prrogramación para este ejemplo será la opción 1 nodejs (b), asignar un nombre del proyecto (c).
+3. Seleccionar el tamaño de la instancia, para este ejercicio t2.micro esta bien.
 
-<img src="img/ej1-configure-sam-01.png"></img>
+![pw-instance-size.png](../img/pw-instance-size.png)
 
-4. Un template básico será clonado desde un repositorio remoto (por eso se requiere git instalado) (a), después seleccionar el template "Hello World" (b).
 
-<img src="img/ej1-descargando-aplicacion.png"></img>
+4. Configurar la instancia como:
+a) Establecer el número de instancias en **2**.
+b) Seleccionar la VPC con la que se ha venido trabajando.
+c) Seleccionar una de las subredes públicas.
+d) Establecer asignación de IP pública al momento de generarse la instancia.
 
-5. Hay que leer el README.md sugerido en la pantalla anterior, dentro del readme se encuentran los comandos para despliegue de la aplicación.
+![pw-configure-instance-01.png](../img/pw-configure-instance-01.png)
 
-<img src="img/ej1-read-readme.md.png"></img>
+e) Establecer el comportamiento del apagado de la instancia como "Stop"
+f) Habilitar la protección contra borrado accidental (se recomienda siempre habilitarla).
+g) Establecer la ejecución en hardware compartido.
+h) Establecer comandos que se deben ejecutar al momento de crear la instancia, copiar y pegar los siguientes comandos (debe ir desde el # hasta la última palabra).
+```ssh
+#!/bin/bash
+sudo yum update -y
+sudo amazon-linux-extras install -y docker
+sudo yum install -y postgresql
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+sudo systemctl enable docker
+```
+![pw-configure-instance-02.png](../img/pw-configure-instance-02.png)
 
-6. Ejecutar los comandos `sam build` en la carpeta del proyecto generado.
 
-<img src="img/ej1-sam-build.png"></img>
+5. Establecer el storage que tendrán las instancias, habilitar el borrado en terminación, al momento de eliminar la instancia también se eliminará el volumen.
 
-7.  Ejecutar el comando `sam deploy --guided`
-Se ejecutará un pequeño Wizard que habrá que ir siguiendo (a).
-b) Establecer un nombre descriptivo.
-c) Confirmar cambios para despliegue.
+![pw-configure-storage-01.png](../img/pw-configure-storage-01.png)
 
-<img src="img/ej1-deploy-serverless-01.png"></img>
+6. Establecer Tags para facilidad de administración.
 
-Por el momento dar click en yes a todas las opciones para poder desplegar la aplicación de ejemplo.
-Establecer el nombre de un "ambiente", para este ejemplo se establece como `develop`. El despliegue comienza, se muestra un resumen de los cambios.
+![pw-add-tags-01.png](../img/pw-add-tags-01.png)
 
-<img src="img/ej1-deploying-application-01.png"></img>
+7. Establecer los grupos de seguridad (firewall a nivel de instancia) definiendo el tráfico permitido a las instancias. En este caso SSH, HTTP y HTTPS.
 
-8. Desplegar los cambios presionando "Y"
+![pw-security-group-01.png](../img/pw-security-group-01.png)
 
-<img src="img/ej1-sam-deploying-03.png"></img>
 
-9. Al finalizar el despliegue se muestra una URL, esta URL es la que se podrá usar para consumir el servicio.
+8. Verificar las configuraciones y lanzar las instancias.
 
-<img src="img/ej1-configuration-done-01.png"></img>
+![pw-launch-instance.png](../img/pw-launch-instance.png)
 
-10. Al consumir desde el navegador la URL anterior se ve una respuesta de la aplicación.
+9. Generar la llave de conexión nueva (a), establecer el nombre de la llave (b), descargar la llave (c) sin la llave no se podrá conectar a la instancia por SSH, finalizar en "Launch Instances" (d).
 
-<img src="img/ej1-json-responsed-sam-serverless.png"></img>
+![pw-launch-instance-01.png](../img/pw-launch-instance-01.png)
 
-11. Ir a la consola de AWS al servicio Lambda para ver que sucedió.
+Después de algunos momentos las instancias son generadas.
 
-<img src="img/ej1-goto-aws-console-lambda.png"></img>
-
-12. Al abrir la consola de Lambda, se verá una lambda desplegada.
-
-<img src="img/ej1-lambda-deployed-in-console-01.png"></img>
+![pw-launching-instances-01.png](../img/pw-launching-instances-01.png)

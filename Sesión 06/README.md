@@ -20,10 +20,8 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: AWS SAM CLI](./Ejemplo%2001/README.md)
-    - [Reto 01: Modificar Lambda desplegada](./Reto%2001/README.md)
-- [Ejemplo 02: EC2 (bastión)](./Ejemplo%2002/README.md)
-- [Ejemplo 03: Load Balancer](./Ejemplo%2003/README.md)
-- [Ejemplo 04: Docker en EC2 (API del proyecto)](./Ejemplo%2004/README.md)
-    - [Reto 02: Frontend para registro](./Reto%2002/README.md)
-- [Postwork: Elastic Beanstalk](./Postwork.md)
+- [Ejemplo 01: EC2 (bastión)](./Ejemplo%2001/README.md)
+- [Ejemplo 02: Load Balancer](./Ejemplo%2002/README.md)
+- [Ejemplo 03: Docker en EC2 (API del proyecto)](./Ejemplo%2003/README.md)
+    - [Reto 01: Frontend para registro](./Reto%2001/README.md)
+- [Postwork: AWS SAM CLI](./Postwork.md)
