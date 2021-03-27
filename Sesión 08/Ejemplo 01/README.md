@@ -1,4 +1,4 @@
-# Ejemplo 1: SMS en registro
+# Ejemplo 1: Configurar topico en SNS
 
 ## 1. Objetivo 
 - Integración de servicios de Messaging, servicios para la comunicación entre servicios de AWS.
