@@ -12,6 +12,6 @@
 ## Organización de la clase
 
 - [Ejemplo 01: SMS en registro](./Ejemplo%2001/README.md)
-- [Ejemplo 02: Amazon Rekognition](./Ejemplo%2002/README.md)
+- [Ejemplo 02: Amazon Rekognition](./Ejemplo%2002/Readme.md)
 - [Ejemplo 03: AWS Comprehend](./Ejemplo%2003/README.md)
 - [Postwork: AWS Config](./Postwork.md)
