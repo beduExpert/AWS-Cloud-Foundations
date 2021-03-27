@@ -16,7 +16,7 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: CodeCommit](./Ejemplo%2001/README.md)
+- [Ejemplo 01: CodeCommit](./Ejemplo%2001/Readme.md)
     - [Reto 01: Notificaciones con SNS](./Reto%2001/README.md)
 - [Ejemplo 02: DevOps - Elastic Container Registry & Code Build](./Ejemplo%2002/README.md)
 - [Ejemplo 03: DevOps - Elastic Container Service & Task Definition](./Ejemplo%2003/README.md)
