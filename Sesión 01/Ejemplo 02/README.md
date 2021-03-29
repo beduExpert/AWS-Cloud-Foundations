@@ -1,46 +1,61 @@
-# Ejemplo 02 - Diagramación de arquitectura
+# Ejemplo 02 - Creación de un perfil IAM
 
 ## Objetivo
 
-* Enseñar a diagramar arquitecturas en AWS
+* Crear un usuario que no sea el raiz para usar la cuenta
 
 ## Desarrollo
 
 >**💡 Nota para experto(a)**
 >
-> Mencionar que es preferible que trabajen en US East (N. Virginia)
-us-east-1 por el certificado global o bien, una vez que elijan una región, se apeguen a ella
+>Menciona al alumno la importacia de no usar el usuario raiz en el día a día de la cuenta
 
 ### Instrucciones
 
-1. Comenzar por diagramar las subredes públicas y privadas
-2. Agregar BD y grupo de seguridad en subnet privada
-3. Poner instancias EC2 y grupos de seguridad en subnets públicas
-4. Poner los elementos que la VPC usa para la comunicación interna
-    * main route table
-    * private route table
-    * application load balancer
-    * NAT Gateway
-    * Internet Gateway
+1. Al regresar a firmarte a tu cuenta AWS, podras observar que existen dos opciones: 
+    * Root user
+    * IAM user
 
-5. Poner componentes externos a la VPC
-    * route 53
-    * cloudfront
-    * S3
-    * SNS
+2. Selecciona `Root user` e ingresa con el email y contraseña que usaste en la creación de la cuenta
+<img src="img/1.png"></img>
 
-6. Trazar VPC
+3. Dentro del buscador de servicios, localiza IAM (Identity and Access Management) e ingresa a `users` ya sea con el menú izquierdo o la opción del dashboard
+<img src="img/2.png"></img>
 
-7. Agregar componentes de CI/CD (Development)
-    * CodeCommit
-    * CodeBuild
-    * CodePipeline
-    * ECR
+4. Da clic en la opción `Add user`
+<img src="img/3.png"></img>
 
-8. Trazar región
+5. Completa la siguiente información
+    * nombre de usuario con el que trabajarás en tu día a día
+    * otorga aceso programatico (necesario para el CLI y SDK) y a la consola (acceso web)
+    * requiere que se cambie el password después del primer ingreso
+    * Da click en `Next`
+    
+    <img src="img/4.png"></img>
 
-9. Trazar límite de AWS
+6. Procederemos a otorgar los permisos de lo que puede hacer a través de un grupo
+    * Da un nombre al grupo como `cloud`
+    * Seleccionar los siguientes `policies`
+        * AmazonEC2FullAccess
+        * ElasticLoadBalancingFullAccess
+        * AmazonS3FullAccess
+        * CloudFrontFullAccess
+        * AmazonVPCFullAccess
+        * AmazonMacieFullAccess
+        * AmazonESFullAccess
+        * AmazonSNSFullAccess
+        * AmazonRoute53FullAccess
+        * AWSCertificateManagerFullAccess
+    * Dar click en `Create group` para confirmar
 
-10. Agregar usuarios
+    <img src="img/5.png"></img>
+    <img src="img/6.png"></img>
 
-<img src="img/1.jpg"></img>
+7. Agregar usuario al grupo recien creado
+
+8. Agregar etiquetas representativas (pregunta a tu instructor qué te sugiere)
+
+9. Descarga el archivo `.csv` que contiene la información de acceso y guardalo en un lugar seguro
+<img src="img/8.png"></img>
+
+10. Prueba el acceso con la URL que viene en el archivo `.csv` y cambia tu contraseña

@@ -1,61 +1,66 @@
-# Reto 1
+# Reto 01: Búsqueda de información sencible con Amazon Macie
 
 ## 1. Objetivo 
-- Establecer una administración mantenible de políticas y usuarios.
+- En un bucket S3 buscar información sensible.
 
-## 2. Requisitos
-- Una cuenta de usuario de IAM con una **política insertada**, es decir una política agregada directamente al usuario.
+## 2. Requisitos 
+- AWS CLI instalado y configurado.
+- Un bucket S3 con algunos archivos que simularán ser archivos con información sensible.
 
 ## 3. Desarrollo 
 
-Una política insertada es una política que no puede ser rehusada ya que solo está disponible para el usuario para la que se generó. En el escenario que se deban agregar 20 usuarios para administrar el contenido del bucket configurado como servidor web habría que ir en cada usuario agregando la política, si la política se requiere cambiar en el futuro habrá que ir en cada usuario cambiando a política proceso en el cual es muy propenso a error humano pudiendo no aplicar correctamente las políticas de acceso o denegación a algún usuario. Se generará un grupo, a ese grupo se agregará una política, así si se requiere usar esa política solo habría que agregar a los 20 usuarios al grupo sin necesidad de ir definiendo la política usuario por usuario.
+1. Ingresar a la consola de AWS buscando el servicio Amazon Macie.
 
-1. Ingresar a IAM, usuarios y seleccionar le usuario con la política insertada. Expandir la política insertada y copiar el contenido JSON de la política.
+<img src="img/ej3-macie-get-start.png"></img>
 
-<img src="img/r1-politica-insertada-copiar.png"></img>
+2. Habilitar Macie, al habilitarlo se genera un rol con la política necesaria para que el servicio acceda al servicio S3.
 
-2. Dirigirse al menú de políticas y luego dar click en "crear una nueva política", con ello se generará una política que puede ser reutilizada.
+<img src="img/ej3-habilitar-macie.png"></img>
 
-<img src="img/r1-add-new-policy.png"></img>
+<img src="img/ej3-habilitar-macie-02.png"></img>
 
-3. Dar click en JSON, copiar la política previamente copiada y dar click en "Revisar política".
+3. Al habilitar el servicio, Macie  da un reporte de los buckets a los que tiene acceso. Habrá que ejecutar un trabajo de escaneo
 
-<img src="img/r1-json-policy.png"></img>
+<img src="img/ej3-macie-dashboard.png"></img>
 
-4. AL pasar a revisión se debe especificar el nombre de la política y una descripción, la descripción debe ser lo suficientemente detallada para saber a que aplica la política y para que fue diseñada.
+4. Se debe seleccionar el o los buckets para ser analizados.
 
-<img src="img/r1-add-shared-policy.png"></img>
+<img src="img/ej3-buckets-selected.png"></img>
 
-5. Creada la política habrá que dirigirse a **Grupos**
 
-<img src="img/r1-add-group-menu.png"></img>
+5. Confirmar el bucket y el costo estimado.
 
-Dar click en **Crear grupo**
+<img src="img/ej3-macie-estimado.png"></img>
 
-6. Establecer un nombre al grupo.
+6. Para no incurrir en costos periódicos se deberá seleccionar como trabajo único.
 
-<img src="img/r1-add-group.png"></img>
+<img src="img/ej3-macie-periodicidad.png"></img>
 
-7. Se busca la política recién creada para asociarla al grupo.
+7. En la siguiente pantalla se pueden escoger identificadores personales, son patrones basados en regex o palabras clave que deben ser identificados como información sensible, por defecto Macie ya detecta nombres,direcciones y números de tarjetas de crédito.
 
-<img src="img/r1-add-policy-to-grouo.png"></img>
+<img src="img/ej3-identificadores-personales.png"></img>
 
-8. Revisar que la política asociada es correcta, después dar click en **Crear grupo**
+8. Se asigna un nombre y descripción para el trabajo.
 
-<img src="img/r1-add-group-done.png"></img>
+<img src="img/ej3-macie-add-name-and-description.png"></img>
 
-9. Ingresar al grupo recién creado, para agregar usuarios. Todos los usuarios agregados tendrán aplicada la política asociada al grupo, basta con sacar al usuario del grupo para que la política deje de aplicarle.
+9. Se revisan los datos configurados, de ser correctos se finaliza la configuración.
 
-<img src="img/r1-add-user.png"></img>
+<img src="img/ej3-macie-config-review.png"></img>
 
-<img src="img/r1-add-user-done.png"></img>
+10. El trabajo comienza a ejecutarse.
 
-10. Al ingresar el usuario se observa aún la política administrada, también se observan las políticas aplicadas al usuario por medio de la pertenencia a grupos de IAM. Ya se puede eliminar con seguridad la política insertada (a) con ello se ha generado una estructura de permisos bastante mantenible.
+<img src="img/ej3-macie-running-job.png"></img>
 
-<img src="img/r1-remove-inserted-policy.png"></img>
+11.  Completado el trabajo se tendrá acceso a un reporte de hallazgos.
 
-11. Se comprueba que el comportamiento de los permisos del usuario sigan siendo los correctos después de eliminar la política insertada. **¡Éxito!**
+<img src="img/ej3-macie-job-done.png"></img>
 
-<img src="img/r1-access-denied-bucket-01.png"></img>
+12. Verificando el contenido del archivo se puede ver que son 4 nombres encontrados y reportados.
 
-<img src="img/r1-access-granted.png"></img>
+<img src="img/ej3-report-done.png"></img>
+
+
+> 💡**Nota:**
+>
+> Hay que aclarar sobre el costo de Macie, a diferencia de otros servicios de AWS, Macie cobra 10 centavos de dólar por el simple hecho de haber dado de alta un bucket en el servicio, si se agregan 10 buckets se cobrarían 10 dólares al fianl de mes, esos 10 dólares son independientes de las tareas de ejecucion de Macie, dependiendo de la cantidad de datos procesados en GB en cada tarea de búsqueda será el monto dle cobro, se cobra 1 dólar por cada GB de datos procesados, así si cada uno de esos 10 buckets tiene 2 GB de datos para procesar, se estarían pagando 20 dólares de procesamiento de datos, para al final en total pagar 10 dólares por los 10 buckets dados de alta y otros 20 por los 20 GB de datos procesados dando un total de 30 dólares al final de mes. 

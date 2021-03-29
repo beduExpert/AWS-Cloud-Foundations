@@ -1,108 +1,115 @@
-# Ejemplo 3
+# Ejemplo 03: Elastic Container Service & Task Definition
 
-## 1. Objetivo 
-- Muchas veces al trabajar con datos el reto consiste en normalizar los datos a un formato útil para los propósitos de las tareas que se desean realizar.
+## 1. Objetivo
+
+- Definir dónde se ejecutará la imagen de docker generada por AWS CodeBuild
 
 ## 2. Requisitos 
-- Cuenta de AWS Console
-- AWS CLI configurado con credenciales con permisos para lectura y escritura en el servicio S3.
+- Acceso a AWS Console
+- Haber completado el Ejemplo 02
 
-## 3. Desarrollo 
+## 3. Desarrollo
 
->**💡Nota**
->
->El siguiente ejemplo y código están destinados únicamente a fines educativos. Asegúrese de personalizarlo, probarlo y revisarlo por su cuenta antes de usar cualquiera de esto en producción.
+1. Se buscará el servicio ECS (Elastic Container Service)  y se ingresará en él.
 
+![pw-ecs-acces-from-admin-web-01.png](../img/pw-ecs-acces-from-admin-web-01.png)
 
-1. Generar un bucket de S3, el bucket será el origen de datos y el destino de los datos ya transformados. Para hacer el trabajo ágilmente se hará por medio de línea de comandos.
-Para tal efecto ejecutar el comando 
-```ssh
-aws s3api create-bucket --bucket my-glue-etl-job-01 --region us-east-1
+2. Dar click en la sección "Clusters"
+
+![pw-ecs-container-service-principal-menu-01.png](../img/pw-ecs-container-service-principal-menu-01.png)
+
+3. Dar click en "Create Cluster"
+
+![pw-ecs-create-cluster-specific-menu-01.png](../img/pw-ecs-create-cluster-specific-menu-01.png)
+
+4. Seleccionar EC2 Linux + Networking
+
+![pw-ecs-select-ec2-and-network-01.png](../img/pw-ecs-select-ec2-and-network-01.png)
+
+5. Configurar cluster
 ```
-Donde `my-glue-etl-job-01` es el nombre del bucket, se puede personalizar el nombre por uno a conveniencia propia.
-
-<img src="img/ej3-s3-create-bucket-01.png"></img>
-
-2. Generar un par de carpetas en el bucket, una carpeta como origen de datos y otra de destino, para lo cual hay que ejecutar el comando:
-
-```ssh
-aws s3api put-object --bucket my-glue-etl-job-01 --key origen/
-```
-
-```ssh
-aws s3api put-object --bucket my-glue-etl-job-01 --key destino/
-```
-
-<img src="img/ej3-create-bucket-s3-origin-destino-folders.png"></img>
-
-3. Descargar los [datos](https://raw.githubusercontent.com/peetck/IMDB-Top1000-Movies/master/IMDB-Movie-Data.csv) que se van a procesar.
-
-Guardar el archivo en una ubicación conocida. Normalmente se puede hacer dando click derecho sobre la página y seleccionando **Guardar como**
- 
- <img src="img/ej3-save-as-csv-database-imdb-01.png"></img>
- 
-4. Subir el archivo que se acaba de descargar con el comando 
-```bash
-aws --region us-east-1 s3 cp D:\downloads\IMDB-Movie-Data.csv s3://my-glue-etl-job-01/origen/
+a) Establecer un nombre al cluster
+b) Establecer el tamaño de instancia donde se ejecutará la imagen de docker, en este caso t2.medium
+c) Establecer el número de instancias en 2
+d) Establecer la imagen del sistema operativo del Host, en este caso Amazon Linux 2 AMI
+e) Establecer el volumen de disco duro, el mínimo son 30 GB, es suficiente para el ejercicio.
+f) No se requerirá acceder a las instancias que ECS genere, no seleccionar ninguna llave.
 ```
 
-Donde `D:\downloads\IMDB-Movie-Data.csv` es la ruta del origen del archivo, reemplazar por la ruta del archivo.
+![pw-ecs-create-cluster-set-ec2-size-01.png](../img/pw-ecs-create-cluster-set-ec2-size-01.png)
 
-<img src="img/ej3-s3-upload-file-01.png"></img>
+6. Seleccionar la red VPC donde se establecerán las instancias (seleccionar la VPC que se ha trabajado en todo el proyecto), establecer las subredes públicas donde residirán las instancias creadas, se establece que se debe asignar una IP pública y se debe seleccionar el grupo de seguridad recién configurado diseñado para puertos dinámicos.
 
-5. Acceder a la consola de AWS, buscar el servicio "Glue", ingresar al servicio.
+![pw-ecs-set-networking-01.png](../img/pw-ecs-set-networking-01.png)
 
-<img src="img/ej3-aws-glue-ingress-to-service-01.png"></img>
+7. Establecer en el punto a) un nuevo rol que ECS creará automáticamente, b) asignar una etiqueta solo para identificación.
 
-6. Ya en el servicio AWS Glue, a) seleccionar "BAse de datos", b) seleccionar "Añadir una base de datos", c) establecer un nombre a los datos que se procesarán.
+![pw-ecs-set-role-and-tags-01.png](../img/pw-ecs-set-role-and-tags-01.png)
 
-<img src="img/ej3-glue-add-database-01.png"></img>
+En ese momento el cluster comienza a generarse.
 
-7. a) Seleccionar En el menú "Tablas" y luego b) "Añadir tablas con un rastreador"
+![pw-ecs-cluster-creating-01.png](../img/pw-ecs-cluster-creating-01.png)
 
-<img src="img/ej3-add-new-table-with-crawler-01.png"></img>
+Al dar click en "View Cluster" se podrá ver el custer generado... después de aproximadamente 5 minutos se verán nuevas instancias EC2 generadas automáticamente, en estas instancias es donde se ejecutará la imagen docker creada por AWS Code Build.
 
-8. Especificar un nombre a la tabla, luego click en  "Siguiente"
+![pw-ecs-cluster-instances-created-done-01.png](../img/pw-ecs-cluster-instances-created-done-01.png)
 
-<img src="img/ej3-glue-add-name-click-in-next-01.png"></img>
+Una vez generado el cluster, se debe configurar una "tarea",  en una tarea se definen las reglas bajo las cuales el o los contenedores operarán, se puede ver como un template o plantilla, más tarde se asociará esta plantilla con el cluster de instancias EC2 recién generado por medio de un _servicio_.
 
-9. Seleccionar las opciones por default
+1. a) Ir a "Task definitions", b) después dar click en "Create new Task Definition"
 
-<img src="img/ej3-add crawler-01.png"></img>
+![pw-ecs-tas-definition-01.png](../img/pw-ecs-tas-definition-01.png)
 
-10. Seleccionar un origen de datos, en este caso S3, seleccionar la ruta de origen de datos que en este caso será la carpeta "origen" en el  bucket S3 recién creado.
+2. Seleccionar una tarea compatible con instancias EC2.
 
-<img src="img/ej3-glue-add-source-files-01.png"></img>
- 
- 11. Seleccionar siguiente
- 
-<img src="img/ej3-glue-choose-next-01.png"></img>
+![pw-ecs-select-ec2-type-task-01.png](../img/pw-ecs-select-ec2-type-task-01.png)
 
-12. Es momento de generar un role para que AWS Glue tenga acceso al bucket S3. Establecer un sufijo al role y dar click en "siguiente".
+3. Configurar la tarea
+```
+a) Establecer un nombre de la tarea descriptivo.
+b) Establecer el rol que permitirá a los contenedores comunicarse con otros servicios de AWS. Se generó con anterioridad.
+c) El modo de red debe quedar como "Bridge"
+```
 
-<img src="img/ej3-glue-create-role-01.png"></img>
+![pw-ecs-configure-task-01.png](../img/pw-ecs-configure-task-01.png)
 
-13. Seleccionar la frecuencia de ejecución **Bajo demanda**
+```
+a) Establecer el Rol de ejecución como "create new role"
+b) Establecer el tamaño de la memoria tarea de ejecución en 256 MiB
+c) Establecer el tamaño de CPU de la tarea de ejecución en 1024 unidades
+```
 
-<img src="img/ej3-glue-run-frequency-01.png"></img>
+![pw-ecs-configure-task-02.png](../img/pw-ecs-configure-task-02.png)
 
+a) Se procederá a configurar el contenedor que será ejecutado en esta tarea
 
-14. Seleccionar la base de datos creada en un principio
+![pw-ecs-configure-task-03.png](../img/pw-ecs-configure-task-03.png)
 
-<img src="img/ej3-select-database-01.png"></img>
+```
+a) Establecer el nombre del contenedor como `generados-leads-01`, es importante establecerlo así ya que el código fuente hace referencia a este nombre de contenedor en el archivo buildspec.yml
+b) Establecer la URI de la imagen que se generó al configurar el repositorio en ECR, a la URI habrá que agregarle al final la etiqueta de la imagen de docker `:latest`
+c) Establecer un limite de memoria hard de 256 MiB
+d) Establecer un mapeo dinámico de puertos poniendo como _Host port_ el puerto 0, el puerto _Container port_ deberá ser establecido en 8000, 8000 es el puerto donde la aplicación se ejecuta.
+```
 
-15. Hechos todos los pasos dar click en **Finalizar**:
+![pw-ecs-task-config-container-01.png](../img/pw-ecs-task-config-container-01.png)
 
-<img src="img/ej3-glue-end-crawler-done-01.png"></img>
+El contenedor de docker como se se ha comprobado en ejercicios anteriores requiere algunas variables de entorno para poder ser ejecutado.
+```
+a) Se debe establecer la variable `DB_HOST`  con el valor de la instancia RDS de base de datos.
+b)  Se debe establecer la variable `DB_NAME`  con el valor especificado al generar la instancia de base de datos RDS.
+c)  Se debe establecer la variable `DB_USER`  con el valor  especificado al generar la instancia de base de datos RDS.
+d)  Se debe establecer la variable `REGION`  con el valor de la región donde se esté trabajando y configurando toda la aplicación.
+e)  Se debe establecer la variable `DB_PASSWORD`  con el valor  especificado al generar la instancia de base de datos RDS.
+```
 
-16. a) Hacer click en **Rastreadores**, b) seleccionar el recién hecho y dar click en **Ejecutar rastreador**
+![pw-ecs-task-config-container-02.png](../img/pw-ecs-task-config-container-02.png)
 
-<img src="img/ej3-glue-run-crawler-01.png"></img>
+Los otros parámetros del contenedor se pueden dejar por defecto. Click en "Add"
 
-Se verá como comienza la ejecución:
+![pw-ecs-task-config-container-05.png](../img/pw-ecs-task-config-container-05.png)
 
-<img src="img/ej3-glue-crawler-starded-01.png"></img>
+Los parámetros de la tarea de ejecución que siguen para configurar deben quedar como se aprecia en la imagen.
+ Click en "Create"
 
-17. a) Dar click en "Tablar", b) se verá una tabla creada por el rastreador
-
-<img src="img/ej3-glue-table-created-by-crawler-01.png"></img>
+![pw-ecs-task-configure-task-done-01.png](../img/pw-ecs-task-configure-task-done-01.png)

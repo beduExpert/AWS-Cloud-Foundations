@@ -1,4 +1,4 @@
-# Ejemplo 3
+# Ejemplo 3: AWS Comprehend
 
 ## 1. Objetivo 
 - Probar el análisis de textos con las herramientas de AI Services de AWS para análisis de sentimientos y reconocimiento de entidades.

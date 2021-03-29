@@ -20,14 +20,9 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Usando AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2002/Ejemplo%2001)
-
-- [Reto  01: AWS CLI](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2002/Reto%2001)
-
-- [Ejemplo 02: Generando un bucket y copiando un archivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2002/Ejemplo%2002)
-
-- [Ejemplo 03: Generando un bucket y copiando un archivo](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2002/Ejemplo%2003)
-
-- [Reto  02:  AWS CLI con S3](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2002/Reto%2002)
-
-
+- [Ejemplo 01: Usando AWS CLI](./Ejemplo%2001/README.md)
+    - [Reto  01: Familiarización con AWS CLI](./Reto%2001/README.md)
+- [Ejemplo 02: Generando un bucket y copiando un archivo](./Ejemplo%2002/README.md)
+- [Ejemplo 03: Servidor web estático](./Ejemplo%2003/README.md)
+    - [Reto  02:  Servidor web estático con dominio](./Reto%2002/README.md)
+- [Postwork: AWS CLI con S3](./Postwork.md)

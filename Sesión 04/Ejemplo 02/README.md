@@ -1,4 +1,4 @@
-# Ejemplo 2
+# Ejemplo 2: Cifrado de datos en un S3
 
 ## 1. Objetivo 
 - Conocer como se pueden asegurar los datos de reposo en un bucket por medio del cifrado.

@@ -9,22 +9,19 @@
 
 ## Requisitos
 
-- AWS CLI instalado
-- Tener cuenta en [Freenom](https://www.freenom.com/es/index.html?lang=es) para tener un dominio gratuito, si se desea generar una cuenta de paga también puede servir solo habría que asegurarse que se tiene la gestión DNS de ese dominio.
+- Cuenta de [diagrams.net](https://app.diagrams.net)
 - Tarjeta de crédito
+- Tener cuenta en [Freenom](https://www.freenom.com/es/index.html?lang=es) para tener un dominio gratuito, si se desea generar una cuenta de paga también puede servir solo habría que asegurarse que se tiene la gestión DNS de ese dominio.
+- AWS CLI instalado
 
 ## Organización de la clase
 
-- [Reto 01: Bolsas de trabajo relacionados con tecnologías de AWS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2001)
-
-- [Reto  02: Abre tu primera cuenta en Amazon Web Services](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2002)
-
-- [Reto 03: Servicios ofrecidos de AWS.](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2003)
-
-- [Reto 04: Adquirir un dominio](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2004)
-
-- [Reto  05:  Simulador para armar una servidor](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2005)
-
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2001/Postword.md)
+- [Ejemplo 01: Diagramación de arquitectura del proyecto](./Ejemplo%2001/README.md)
+    - [Reto 01: Bolsas de trabajo relacionados a tecnologías de AWS](./Reto%2001/README.md)
+    - [Reto  02: Abre tu primera cuenta en AWS](./Reto%2002/README.md)
+- [Ejemplo 02: Creación de un perfil IAM](./Ejemplo%2002/README.md)
+    - [Reto 03: Creación grupos IAM](./Reto%2003/README.md)
+    - [Reto 04: Adquirir un dominio](./Reto%2004/README.md)
+- [Postwork: Servicios ofrecidos de AWS](./Postwork.md)
 
 

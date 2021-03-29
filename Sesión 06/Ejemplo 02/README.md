@@ -1,7 +1,7 @@
-# Ejemplo 2 
+# Ejemplo 2: Load Balancer
 
 ## 1. Objetivo 
-- Conocer el bastión básico para la ejecución de cómputo en la nube con EC2. 
+- Conocer la configuracion para usar un balanceador de carga.
 
 ![pw-a-donde-vamos-01.png](../img/pw-a-donde-vamos-01.png)
 
@@ -11,67 +11,53 @@
 - Una base de datos RDS generada, tener contraseña, usuario, url (Endpoint ) de la instancia.
 - Tener grupos de seguridad de tráfico de entrada a puertos 22, 80, 443, 5432.
 - Certificado de seguridad en Amazon Certificade Manager.
+- [Postman](https://www.postman.com/product/rest-client/) instalado para verificar el funcionamiento de la API.
 
-## 3. Desarrollo 
+Toca dar de alta el balanceador de carga, se encargará de despachar las solicitudes a cada una de las instancias lanzadas.
 
-1. En el panel de EC2, dar click en "Lanzar la instancia".
+1. En el panel del servicio EC2, seleccionar "Balanceadores de carga" (a), después "Create Load Balancer" (b).
 
-![pw-launch-instance.png](../img/pw-launch-instance.png)
+![pw-create-balancer-01.png](../img/pw-create-balancer-01.png)
 
-2. Seleccionar la siguiente AMI.
+2. Seleccionar el balanceador de carga de tipo **Application**
 
-![pw-select-ami.png](../img/pw-select-ami.png)
-
-3. Seleccionar el tamaño de la instancia, para este ejercicio t2.micro esta bien.
-
-![pw-instance-size.png](../img/pw-instance-size.png)
+![pw-select-application-load-balancer-01.png](../img/pw-select-application-load-balancer-01.png)
 
 
-4. Configurar la instancia como:
-a) Establecer el número de instancias en **2**.
-b) Seleccionar la VPC con la que se ha venido trabajando.
-c) Seleccionar una de las subredes públicas.
-d) Establecer asignación de IP pública al momento de generarse la instancia.
+3. Configurar el balanceador con:
+a) Establecer un balanceador de carga.
+b) Establecer un balanceador de carga de cara hacia internet
+c) Seleccionar el tráfico https
+d) Seleccionar la red VPC con la que se ha venido trabajando
+e) Seleccionar las subredes públicas de cara a internet.
 
-![pw-configure-instance-01.png](../img/pw-configure-instance-01.png)
+![pw-load-balancer-configure-01.png](../img/pw-load-balancer-configure-01.png)
 
-e) Establecer el comportamiento del apagado de la instancia como "Stop"
-f) Habilitar la protección contra borrado accidental (se recomienda siempre habilitarla).
-g) Establecer la ejecución en hardware compartido.
-h) Establecer comandos que se deben ejecutar al momento de crear la instancia, copiar y pegar los siguientes comandos (debe ir desde el # hasta la última palabra).
-```ssh
-#!/bin/bash
-sudo yum update -y
-sudo amazon-linux-extras install -y docker
-sudo yum install -y postgresql
-sudo service docker start
-sudo usermod -a -G docker ec2-user
-sudo systemctl enable docker
-```
-![pw-configure-instance-02.png](../img/pw-configure-instance-02.png)
+4. Seleccionar el certificado de seguridad.
+
+![pw-add-certificate-manager-01.png](../img/pw-add-certificate-manager-01.png)
 
 
-5. Establecer el storage que tendrán las instancias, habilitar el borrado en terminación, al momento de eliminar la instancia también se eliminará el volumen.
+5. Seleccionar el permiso para tráfico https.
 
-![pw-configure-storage-01.png](../img/pw-configure-storage-01.png)
-
-6. Establecer Tags para facilidad de administración.
-
-![pw-add-tags-01.png](../img/pw-add-tags-01.png)
-
-7. Establecer los grupos de seguridad (firewall a nivel de instancia) definiendo el tráfico permitido a las instancias. En este caso SSH, HTTP y HTTPS.
-
-![pw-security-group-01.png](../img/pw-security-group-01.png)
+![pw-security-group-load-balancer.png](../img/pw-security-group-load-balancer.png)
 
 
-8. Verificar las configuraciones y lanzar las instancias.
+6. Establecer el **target group**, básicamente con esto se le indica al balanceador de carga cuales son las instancias EC2 a las que debe ser redirigido el tráfico.
 
-![pw-launch-instance.png](../img/pw-launch-instance.png)
+a), b) Especificar un nuevo target, dar un nombre específico al target para fácil administración.
+c) especificar que se darán de alta en el grupo instancias.
+d), e) Especificar protocolo y puerto al cual será redirigido el tráfico hacia las instancias.
+f) Para este caso especial por el tipo de programa que se usará, especificar el protocolo http y la ruta `/api/v1/` como path para verificar que el servicio se este ejecutando.
 
-9. Generar la llave de conexión nueva (a), establecer el nombre de la llave (b), descargar la llave (c) sin la llave no se podrá conectar a la instancia por SSH, finalizar en "Launch Instances" (d).
+![pw-create-target-group.png](../img/pw-create-target-group.png)
+ 
+7. Agregar las instancias que se agregaran al target group para redirigir el tráfico web.
+a) Seleccionar las instancias.
+b) Agregar las instancias al balanceador.
 
-![pw-launch-instance-01.png](../img/pw-launch-instance-01.png)
+![pw-add-instances-to-target-group.png](../img/pw-add-instances-to-target-group.png)
 
-Después de algunos momentos las instancias son generadas.
+Pocos segundos después el balanceador es generado.
 
-![pw-launching-instances-01.png](../img/pw-launching-instances-01.png)
+ ![pw-balancer-created-01.png](../img/pw-balancer-created-01.png)

@@ -1,4 +1,4 @@
-# Ejemplo 1 
+# Ejemplo 1: Acceso a S3 con usuario IAM
 
 ## 1. Objetivo 
 - Conceder acceso restringido al bucket que funciona como web server para solo poder eliminar o agregar objetos a modo de mantenimiento de la página web servida por él. Así a quien se le conceda acceso podrá dar mantenimiento a la web sin comprometer la seguridad de la cuenta de AWS. 

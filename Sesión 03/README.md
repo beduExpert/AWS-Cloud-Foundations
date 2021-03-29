@@ -16,12 +16,8 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Hostear una página web con Cloudfront](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2003/Ejemplo%2001)
-
-- [Ejemplo  02: Bloqueo de peticiones que no se hagan desde México](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2003/Ejemplo%2002)
-
-- [Reto 01: Permitir peticiones desde la IP de una VPN](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2001/Reto%2003)
-
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2003/Postwork.md)
-
-
+- [Ejemplo 01: Hostear una página web con Cloudfront](./Ejemplo%2001/README.md)
+- [Ejemplo 02: Creación de VPC: Public Subnet (dmz) & Internet Gateway](./Ejemplo%2002/README.md)
+- [Ejemplo 03: Creación de VPC: Subnet, NAT gateway, Elastic IP](./Ejemplo%2003/README.md)
+    - [Reto 01: Creación de Security Groups.](./Reto%2001/README.md)
+- [Postwork: Bloqueo y acceso de peticiones por geolocalización](./Postwork.md)

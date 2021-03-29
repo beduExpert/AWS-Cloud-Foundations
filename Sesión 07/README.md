@@ -16,16 +16,10 @@
 
 ## Organización de la clase
 
-- [Ejemplo 01: Explorar el modelo de computación en la nube Serverless](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2001)
-
-- [Ejemplo 02: Repositorio para alojar código](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2002)
-
-- [Ejemplo 03: Normalizar los datos](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Ejemplo%2002)
-
-- [Reto 01: Menús interactivos en un ecommerce](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Reto%2001)
-
-- [Reto 02: Notificar los cambios por medio de SMS](https://github.com/beduExpert/AWS-Cloud-Foundations2020/tree/main/Sesión%2007/Reto%2001)
-
-- [Postwork](https://github.com/beduExpert/AWS-Cloud-Foundations2020/blob/main/Sesión%2007/Postwork.md)
-
-
+- [Ejemplo 01: CodeCommit](./Ejemplo%2001/Readme.md)
+    - [Reto 01: Notificaciones con SNS](./Reto%2001/README.md)
+- [Ejemplo 02: DevOps - Elastic Container Registry & Code Build](./Ejemplo%2002/README.md)
+- [Ejemplo 03: DevOps - Elastic Container Service & Task Definition](./Ejemplo%2003/README.md)
+- [Ejemplo 04: DevOps - ECS Cluster](./Ejemplo%2004/README.md)
+- [Ejemplo 05: DevOps - Code Pipeline](./Ejemplo%2005/README.md)
+- [Postwork: Elasticsearch](./Postwork.md)

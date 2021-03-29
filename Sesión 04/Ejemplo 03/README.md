@@ -1,66 +1,111 @@
-# Ejemplo 3 
+# Ejemplo 03: Certificado SSL
 
 ## 1. Objetivo 
-- En un bucket S3 buscar información sensible.
+- Asegurar el cifrado de información en tránsito para el bucket configurado como servidor web estático de la sesión 2 con el servicio CLoudFront.
 
 ## 2. Requisitos 
-- AWS CLI instalado y configurado.
-- Un bucket S3 con algunos archivos que simularán ser archivos con información sensible.
+- Acceso a una cuenta de AWS por medio de AWS Console
 
 ## 3. Desarrollo 
 
-1. Ingresar a la consola de AWS buscando el servicio Amazon Macie.
+Para asegurar el tráfico sobre el protocolo https se generará un certificado de seguridad. Para ellos seguir los pasos:
 
-<img src="img/ej3-macie-get-start.png"></img>
+1. Acceder a la Consola de administración, seleccionar **Certificate Manager**
 
-2. Habilitar Macie, al habilitarlo se genera un rol con la política necesaria para que el servicio acceda al servicio S3.
+![pw-certificate-manager.png](img/pw-certificate-manager.png)
 
-<img src="img/ej3-habilitar-macie.png"></img>
+2. Seleccionar **Aprovisionar certificados**
 
-<img src="img/ej3-habilitar-macie-02.png"></img>
+![pw-aprovisionar2.png](img/pw-aprovisionar2.png)
 
-3. Al habilitar el servicio, Macie  da un reporte de los buckets a los que tiene acceso. Habrá que ejecutar un trabajo de escaneo
+3. Seleccionar **Solicitar un certificado público**
+![pw-certificado-publico.png](img/pw-certificado-publico.png)
 
-<img src="img/ej3-macie-dashboard.png"></img>
+4. Se deberá especificar el o los subdominios para los que el certificado será emitido, como ejemplo se emitirá un certificado wildcard para el dominio edupractice.tk
 
-4. Se debe seleccionar el o los buckets para ser analizados.
+![pw-wildcard.png](img/pw-wildcard.png)
 
-<img src="img/ej3-buckets-selected.png"></img>
+5. Antes de seguir con la generación del certificado se debe comprobar la propiedad del dominio, en este caso se hará la comprobación por medio de un registro en el DNS.
 
+![pw-domain-dns-ownership.png](img/pw-domain-dns-ownership.png)
 
-5. Confirmar el bucket y el costo estimado.
+6. Especificar las etiquetas que el recurso tendrá, útiles a la hora de analizar costos o administrar recursos.
 
-<img src="img/ej3-macie-estimado.png"></img>
+![pw-certificate-tags.png](img/pw-certificate-tags.png)
 
-6. Para no incurrir en costos periódicos se deberá seleccionar como trabajo único.
+7. Revisar el o los dominios para los que se solicitará el certificado, proceder con la solicitud
 
-<img src="img/ej3-macie-periodicidad.png"></img>
+![pw-certificate-solicitud.png](img/pw-certificate-solicitud.png)
 
-7. En la siguiente pantalla se pueden escoger identificadores personales, son patrones basados en regex o palabras clave que deben ser identificados como información sensible, por defecto Macie ya detecta nombres,direcciones y números de tarjetas de crédito.
+8. Las instrucciones para comprobar la propiedad del certificado son generadas, en el caso de manejar el DNS con Route 53 el registro CNAME es generado automáticamente, en caso de no manejar el DNS con Route 53 se tendrá que generar el registro CNAME de forma manual con los valores que aparecen en las instrucciones.
 
-<img src="img/ej3-identificadores-personales.png"></img>
+![pw-dns-01.png](img//pw-dns-01.png)
 
-8. Se asigna un nombre y descripción para el trabajo.
+![pw-Certificate-manager-dns-02.png](img/pw-Certificate-manager-dns-02.png)
 
-<img src="img/ej3-macie-add-name-and-description.png"></img>
+9. El registro DNS se genera y el certificado será generado al cabo de unos minutos.
 
-9. Se revisan los datos configurados, de ser correctos se finaliza la configuración.
+![aws-certificate-ownership-done.png](img/aws-certificate-ownership-done.png)
 
-<img src="img/ej3-macie-config-review.png"></img>
+![pw-certificado-emitido.png](img/pw-certificado-emitido.png)
 
-10. El trabajo comienza a ejecutarse.
+El paso siguiente: Ya se cuenta con un sitio servido por Cloudfront, para asegurar el tráfico https es necesario hacer los siguientes pasos:
 
-<img src="img/ej3-macie-running-job.png"></img>
+1. Acceder en la consola de administración seleccionando **CloudFront**.
 
-11.  Completado el trabajo se tendrá acceso a un reporte de hallazgos.
+![aws-clodfront.png](img/aws-clodfront.png)
 
-<img src="img/ej3-macie-job-done.png"></img>
+2. Click en la distribución previamente hecha para editar su configuración.
 
-12. Verificando el contenido del archivo se puede ver que son 4 nombres encontrados y reportados.
+![pw-edit-distribution.png](img/pw-edit-distribution.png)
 
-<img src="img/ej3-report-done.png"></img>
+3. Click en **Edit**
 
+![pw-edit-the-distribution.png](img/pw-edit-the-distribution.png)
 
-> 💡**Nota:**
->
-> Hay que aclarar sobre el costo de Macie, a diferencia de otros servicios de AWS, Macie cobra 10 centavos de dólar por el simple hecho de haber dado de alta un bucket en el servicio, si se agregan 10 buckets se cobrarían 10 dólares al fianl de mes, esos 10 dólares son independientes de las tareas de ejecucion de Macie, dependiendo de la cantidad de datos procesados en GB en cada tarea de búsqueda será el monto dle cobro, se cobra 1 dólar por cada GB de datos procesados, así si cada uno de esos 10 buckets tiene 2 GB de datos para procesar, se estarían pagando 20 dólares de procesamiento de datos, para al final en total pagar 10 dólares por los 10 buckets dados de alta y otros 20 por los 20 GB de datos procesados dando un total de 30 dólares al final de mes. 
+4. Configurar como:
+a) Establecer el subdominio `app`, en este caso `app.edupractice.tk`.
+b), c) Seleccionar un certificado custom, escoger el recién generado.
+d) Seleccionar soporte SNI.
+e) Seleccionar la familia de protocolos criptográficos recomendados.
+
+![pw-set-certificate.png](img/pw-set-certificate.png)
+
+Se tiene ya configurada la distribución con soporte HTTPS.
+
+![pw-ssl-established.png](img/pw-ssl-established.png)
+
+----------------
+
+Se debe activar el soporte SSL en la configuración de DNS.
+
+1. Ir a Route 53.
+
+![pw-goto-route53.png](img/pw-goto-route53.png)
+
+2. Seleccionar las zonas alojadas.
+
+![pw-select-zones.png](img/pw-select-zones.png)
+
+3. Seleccionar el dominio
+
+![pw-select-domain.png](img/pw-select-domain.png)
+
+4. Seleccionar el dominio (a), click en **Editar**
+
+![pw-edit-domain.png](img/pw-edit-domain.png)
+
+5. Configurar el registro como:
+a) Seleccionar CloudFront.
+b) Seleccionar la región de la distribución de CloudFront.
+c) Seleccionar la distribución.
+
+![pw-configure-register-as.png](img/pw-configure-register-as.png)
+
+El registro es actualizado
+
+![pw-dns-register-done.png](img/pw-dns-register-done.png)
+
+En un navegador ingresar la URL del subdominio, al accederlo se puede observar el certificado de seguridad habilitado.
+
+![pw-ssl-enabled-done.png](img/pw-ssl-enabled-done.png)

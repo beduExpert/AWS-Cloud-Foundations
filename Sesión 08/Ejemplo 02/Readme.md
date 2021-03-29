@@ -1,4 +1,4 @@
-# Ejemplo 2
+# Ejemplo 2: Amazon Rekognition
 
 ## 1. Objetivo 
 - Usar el servicio Amazon Rekognition para Detección de escenas, detección de matrículas y análisis facial.

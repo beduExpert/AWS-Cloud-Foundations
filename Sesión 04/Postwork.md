@@ -1,118 +1,60 @@
-## Postwork
+# Postwork: Creación de política en IAM
 
-## 1. Objetivo 
-- Asegurar el cifrado de información en tránsito para el bucket configurado como servidor web estático de la sesión 2 con el servicio CLoudFront.
+## 1. Objetivo
+- Establecer una administración mantenible de políticas y usuarios.
 
-
-![27acdf95dd36935f912ac3df63651c1e.png](img\27acdf95dd36935f912ac3df63651c1e.png)
-
-
-
-## 2. Requisitos 
-- Acceso a una cuenta de AWS por medio de AWS Console
+## 2. Requisitos
+- Una cuenta de usuario de IAM con una **política insertada**, es decir una política agregada directamente al usuario.
 
 ## 3. Desarrollo 
+Una política insertada es una política que no puede ser rehusada ya que solo está disponible para el usuario para la que se generó. En el escenario que se deban agregar 20 usuarios para administrar el contenido del bucket configurado como servidor web habría que ir en cada usuario agregando la política, si la política se requiere cambiar en el futuro habrá que ir en cada usuario cambiando a política proceso en el cual es muy propenso a error humano pudiendo no aplicar correctamente las políticas de acceso o denegación a algún usuario. Se generará un grupo, a ese grupo se agregará una política, así si se requiere usar esa política solo habría que agregar a los 20 usuarios al grupo sin necesidad de ir definiendo la política usuario por usuario.
 
-Para asegurar el tráfico sobre el protocolo https se generará un certificado de seguridad. Para ellos seguir los pasos:
+1. Ingresar a IAM, usuarios y seleccionar le usuario con la política insertada. Expandir la política insertada y copiar el contenido JSON de la política.
 
-1. Acceder a la Consola de administración, seleccionar **Certificate Manager**
+<img src="img/r1-politica-insertada-copiar.png"></img>
 
-![pw-certificate-manager.png](img/pw-certificate-manager.png)
+2. Dirigirse al menú de políticas y luego dar click en "crear una nueva política", con ello se generará una política que puede ser reutilizada.
 
-2. Seleccionar **Aprovisionar certificados**
+<img src="img/r1-add-new-policy.png"></img>
 
-![pw-aprovisionar2.png](img/pw-aprovisionar2.png)
+3. Dar click en JSON, copiar la política previamente copiada y dar click en "Revisar política".
 
-3. Seleccionar **Solicitar un certificado público**
-![pw-certificado-publico.png](img/pw-certificado-publico.png)
+<img src="img/r1-json-policy.png"></img>
 
-4. Se deberá especificar el o los subdominios para los que el certificado será emitido, como ejemplo se emitirá un certificado wildcard para el dominio edupractice.tk
+4. AL pasar a revisión se debe especificar el nombre de la política y una descripción, la descripción debe ser lo suficientemente detallada para saber a que aplica la política y para que fue diseñada.
 
-![pw-wildcard.png](img/pw-wildcard.png)
+<img src="img/r1-add-shared-policy.png"></img>
 
-5. Antes de seguir con la generación del certificado se debe comprobar la propiedad del dominio, en este caso se hará la comprobación por medio de un registro en el DNS.
+5. Creada la política habrá que dirigirse a **Grupos**
 
-![pw-domain-dns-ownership.png](img/pw-domain-dns-ownership.png)
+<img src="img/r1-add-group-menu.png"></img>
 
-6. Especificar las etiquetas que el recurso tendrá, útiles a la hora de analizar costos o administrar recursos.
+Dar click en **Crear grupo**
 
-![pw-certificate-tags.png](img/pw-certificate-tags.png)
+6. Establecer un nombre al grupo.
 
-7. Revisar el o los dominios para los que se solicitará el certificado, proceder con la solicitud
+<img src="img/r1-add-group.png"></img>
 
-![pw-certificate-solicitud.png](img/pw-certificate-solicitud.png)
+7. Se busca la política recién creada para asociarla al grupo.
 
-8. Las instrucciones para comprobar la propiedad del certificado son generadas, en el caso de manejar el DNS con Route 53 el registro CNAME es generado automáticamente, en caso de no manejar el DNS con Route 53 se tendrá que generar el registro CNAME de forma manual con los valores que aparecen en las instrucciones.
+<img src="img/r1-add-policy-to-grouo.png"></img>
 
-![pw-dns-01.png](img//pw-dns-01.png)
+8. Revisar que la política asociada es correcta, después dar click en **Crear grupo**
 
-![pw-Certificate-manager-dns-02.png](img/pw-Certificate-manager-dns-02.png)
+<img src="img/r1-add-group-done.png"></img>
 
-9. El registro DNS se genera y el certificado será generado al cabo de unos minutos.
+9. Ingresar al grupo recién creado, para agregar usuarios. Todos los usuarios agregados tendrán aplicada la política asociada al grupo, basta con sacar al usuario del grupo para que la política deje de aplicarle.
 
-![aws-certificate-ownership-done.png](img/aws-certificate-ownership-done.png)
+<img src="img/r1-add-user.png"></img>
 
-![pw-certificado-emitido.png](img/pw-certificado-emitido.png)
+<img src="img/r1-add-user-done.png"></img>
 
+10. Al ingresar el usuario se observa aún la política administrada, también se observan las políticas aplicadas al usuario por medio de la pertenencia a grupos de IAM. Ya se puede eliminar con seguridad la política insertada (a) con ello se ha generado una estructura de permisos bastante mantenible.
 
-El paso siguiente: Ya se cuenta con un sitio servido por Cloudfront, para asegurar el tráfico https es necesario hacer los siguientes pasos:
+<img src="img/r1-remove-inserted-policy.png"></img>
 
+11. Se comprueba que el comportamiento de los permisos del usuario sigan siendo los correctos después de eliminar la política insertada. **¡Éxito!**
 
-1. Acceder en la consola de administración seleccionando **CloudFront**.
+<img src="img/r1-access-denied-bucket-01.png"></img>
 
-![aws-clodfront.png](img/aws-clodfront.png)
-
-2. Click en la distribución previamente hecha para editar su configuración.
-
-![pw-edit-distribution.png](img/pw-edit-distribution.png)
-
-3. Click en **Edit**
-
-![pw-edit-the-distribution.png](img/pw-edit-the-distribution.png)
-
-4. Configurar como:
-a) Establecer el subdominio `app`, en este caso `app.edupractice.tk`.
-b), c) Seleccionar un certificado custom, escoger el recién generado.
-d) Seleccionar soporte SNI.
-e) Seleccionar la familia de protocolos criptográficos recomendados.
-
-![pw-set-certificate.png](img/pw-set-certificate.png)
-
-Se tiene ya configurada la distribución con soporte HTTPS.
-
-![pw-ssl-established.png](img/pw-ssl-established.png)
-
-----------------
-
-Se debe activar el soporte SSL en la configuración de DNS.
-
-1. Ir a Route 53.
-
-![pw-goto-route53.png](img/pw-goto-route53.png)
-
-2. Seleccionar las zonas alojadas.
-
-![pw-select-zones.png](img/pw-select-zones.png)
-
-3. Seleccionar el dominio
-
-![pw-select-domain.png](img/pw-select-domain.png)
-
-4. Seleccionar el dominio (a), click en **Editar**
-
-![pw-edit-domain.png](img/pw-edit-domain.png)
-
-5. Configurar el registro como:
-a) Seleccionar CloudFront.
-b) Seleccionar la región de la distribución de CloudFront.
-c) Seleccionar la distribución.
-
-![pw-configure-register-as.png](img/pw-configure-register-as.png)
-
-El registro es actualizado
-
-![pw-dns-register-done.png](img/pw-dns-register-done.png)
-
-En un navegador ingresar la URL del subdominio, al accederlo se puede observar el certificado de seguridad habilitado.
-
-![pw-ssl-enabled-done.png](img/pw-ssl-enabled-done.png)
+<img src="img/r1-access-granted.png"></img>
