@@ -16,7 +16,7 @@
 
 **Para el planteamiento del proyecto conviene conocer:** 🤓
 
-+ [Zonas desmilitarizadas](https://es.wikipedia.org/wiki/Zona_desmilitarizada_(informática))
++ [Zonas desmilitarizadas](https://www.ionos.mx/digitalguide/servidores/seguridad/en-que-consiste-una-zona-desmilitarizada-dmz/f)
 + [Lista de puertos más usados](https://docs.opencloud.cl/tutoriales/servidores/lista-de-puertos-mas-comunmente-utilizados.html)
 + [¿Cómo funciona el protocolo DNS?](https://www.verisign.com/es_LA/website-presence/online/how-dns-works/index.xhtml)
 + [Balanceadores de carga‌](https://www.nginx.com/resources/glossary/load-balancing/)
