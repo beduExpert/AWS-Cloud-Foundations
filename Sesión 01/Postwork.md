@@ -13,10 +13,10 @@
 
 + [Productos de la nube](https://aws.amazon.com/es/products/)
 + [¿Qué es la Computación en la Nube?](https://www.youtube.com/watch?v=IciVhWQ8npw&list=PL9T-KKyKXNCmOnsFmS_aWCmvMvd3HCB7b&ab_channel=YoelvisMulen%7Bcode%7D)
+
+**Para el planteamiento del proyecto conviene conocer:**
+
 + [Zonas desmilitarizadas](https://es.wikipedia.org/wiki/Zona_desmilitarizada_(informática))
-
-+ Para el planteamiento del proyecto conviene conocer:
-
 + [Lista de puertos más usados](https://docs.opencloud.cl/tutoriales/servidores/lista-de-puertos-mas-comunmente-utilizados.html)
 + [¿Cómo funciona el protocolo DNS?](https://www.verisign.com/es_LA/website-presence/online/how-dns-works/index.xhtml)
 + [Balanceadores de carga‌](https://www.nginx.com/resources/glossary/load-balancing/)
