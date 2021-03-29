@@ -40,7 +40,7 @@ Se recomienda encarecidamente que todo el proyecto sea generado en una misma uni
 
 Toda esta infraestructura debe tener un **certificado de seguridad** para operar, será usado AWS Certificate Manager para generarlo, por lo que sería necesario configurar **Route53** para que un dominio sea resuelto. 
 
-<img src="../assets/arquitectura-Infra.jpg">
+<img src="/assets/arquitectura-Infra.jpg">
 
 
 ## :bookmark_tabs: Temario
