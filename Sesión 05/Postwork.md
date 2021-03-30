@@ -1,4 +1,4 @@
-# Postwork 
+# Postwork - Amazon Keyspaces
 
 ## 1. Objetivo 
 - Administración de datos para la base de datos de AWS compatible con Cassandra; Amazon Keyspaces.
