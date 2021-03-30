@@ -16,6 +16,8 @@ Así se puede dar del alta la nueva cuenta de IAM en AWS CLI (especificar las ll
 
 ## 3. Desarrollo 
 
+#### Manos a la obra 👩‍💻
+
 1. Abrir NoSQL Workbench, seleccionar "Launch" en la seccion de Amazon Keyspaces.
 
 <img src="img/ej2-open-nosql-workbench.png"></img>

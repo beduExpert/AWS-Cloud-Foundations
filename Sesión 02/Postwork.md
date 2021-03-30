@@ -1,16 +1,16 @@
 # Postwork
 
-## 1. Objetivo 
+## Objetivo 
 - Explorar las opciones avanzadas de AWS CLI con S3
 
-## 2. Requisitos 
+## Requisitos 
 
 - AWS CLI instalado y configurado.
 - Tener presente la documentación de [AWS CLI](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html) como referencia.
-- Un bucket con archivos pre cargados.
+- Un bucket con archivos precargados.
 - Un bucket vacío.
 
-## 3. Desarrollo  
+## Desarrollo  
 
 **Planteamiento 1**
 
@@ -25,4 +25,5 @@ No es óptimo en costos  y tiempo seguir ese esquema, al descargar los datos a l
 **¿Qué comando se requiere ejecutar para copiar todos los archivos de un bucket a otro?**
 
 Una vez copiados los archivos:
+
 **¿Con qué comando se puede eliminar el bucket de origen?**

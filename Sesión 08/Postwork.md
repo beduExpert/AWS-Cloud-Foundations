@@ -8,9 +8,10 @@
 
 ## 3. Desarrollo 
 
++ Buscar en la consola de administación **AWS config**
 ![ej1-config-access-menu-01.png](img/ej1-config-access-menu-01.png)
 
-
++ Dar click en en el botón de introducción
 ![ej1-config-click-introduction-01.png](img/ej1-config-click-introduction-01.png)
 
 ![ej1-config-select-bucket-services-and-roles-01.png](img/ej1-config-select-bucket-services-and-roles-01.png)

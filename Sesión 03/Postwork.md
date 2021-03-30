@@ -71,7 +71,7 @@ Accediendo a [iplocation](https://www.iplocation.net) se ve que la dirección IP
 
 ### Permiso a peticiones de un pais
 
-Para esta configuración se deberá acceder al servicio `Route 53`, ahí se deberá seleccionar "Crear registro" escogiendo de tipo Geolocalización, al configurar el registro seleccionar el país que se vea en la página [https://www.iplocation.net](https://www.iplocation.net) con la VPN habilitada.
+Para esta configuración se deberá acceder al servicio Route 53, ahí se deberá seleccionar **Crear registro** escogiendo de tipo Geolocalización, al configurar el registro seleccionar el país que se vea en el siguiente [link](https://www.iplocation.net) con la VPN habilitada.
 
 <img src="img/r1-ip-location-country.png">
 

@@ -3,11 +3,13 @@
 ## 1. Objetivo
 - Establecer una administración mantenible de políticas y usuarios.
 
+## 3. Desarrollo 
+Una política insertada es una política que no puede ser rehusada ya que solo está disponible para el usuario para la que se generó. En el escenario que se deban agregar 20 usuarios para administrar el contenido del bucket configurado como servidor web habría que ir en cada usuario agregando la política, si la política se requiere cambiar en el futuro habrá que ir en cada usuario cambiando a política proceso en el cual es muy propenso a error humano pudiendo no aplicar correctamente las políticas de acceso o denegación a algún usuario. Se generará un grupo, a ese grupo se agregará una política, así si se requiere usar esa política solo habría que agregar a los 20 usuarios al grupo sin necesidad de ir definiendo la política usuario por usuario.
+
 ## 2. Requisitos
 - Una cuenta de usuario de IAM con una **política insertada**, es decir una política agregada directamente al usuario.
 
-## 3. Desarrollo 
-Una política insertada es una política que no puede ser rehusada ya que solo está disponible para el usuario para la que se generó. En el escenario que se deban agregar 20 usuarios para administrar el contenido del bucket configurado como servidor web habría que ir en cada usuario agregando la política, si la política se requiere cambiar en el futuro habrá que ir en cada usuario cambiando a política proceso en el cual es muy propenso a error humano pudiendo no aplicar correctamente las políticas de acceso o denegación a algún usuario. Se generará un grupo, a ese grupo se agregará una política, así si se requiere usar esa política solo habría que agregar a los 20 usuarios al grupo sin necesidad de ir definiendo la política usuario por usuario.
+#### Comencemos 👨‍💻
 
 1. Ingresar a IAM, usuarios y seleccionar le usuario con la política insertada. Expandir la política insertada y copiar el contenido JSON de la política.
 
