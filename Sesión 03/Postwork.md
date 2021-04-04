@@ -7,8 +7,7 @@
 - Acceso a AWS Console.
 - Conocimiento básico sobre como funciona el protocolo DNS.
 - Una página hosteada en S3, el nombre del bucket debe coincidir con el subdominio para hacer pruebas `geoejemlo`, así el bucket debe  llamarse para este ejemplo `geoejemlo.<sudominio>`
-- Navegado Opera instalado, es necesario Opera para el uso de VPN que trae integrado.
-
+- Navegado Opera instalado.
 
 ## 3. Desarrollo 
 
